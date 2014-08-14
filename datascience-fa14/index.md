@@ -15,16 +15,16 @@ manipulate data sets with code.
 
 ## Logistics
 
-* Course Number: CS 194-16, CS 294-16 Spring 2014, UC Berkeley
-* Instructor: [Mike Franklin](http://cs.berkeley.edu/~franklin)
-* Time: Monday, 5.30pm - 8.30pm
+* Course Number: CS 194-16, CS 294-16 Fall 2014, UC Berkeley
+* Instructor: [John Canny](http://cs.berkeley.edu/~jfc)
+* Time: MW 5.30pm - 6pm
 * Location: 145 Moffit
-* Teaching Assistants: Daniel Bruckner, Evan Sparks and Shivaram Venkataraman
-* Discussion: Join [Piazza](https://piazza.com/class/ho9kqs2efao27y) for
+* Teaching Assistants: 
+* Discussion: Join [Piazza](https://piazza.com/class/) for
   announcements and to ask questions about the course
 * Office hours:
-  - Mike Franklin - T 3.30-4.30, Th 2.30-3.30 at 449 Soda
-  - GSIs - M 2-3 at 449 Soda, W 11-12 at 751 Soda
+  - John Canny - ? at 637 Soda
+  - GSIs - ? at ? Soda
 
 ## Pre-requisites
 Pre-requisites for this course include 61A, 61B, 61C and basic programming
