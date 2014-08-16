@@ -15,12 +15,12 @@ To create a VM using our [disk image](https://www.eecs.berkeley.edu/~charles/dat
 2.   Download and unzip our VirtualBox disk image [here](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip).
 3.   Open VirtualBox and click the 'New' button.
 4.   Select the following options in the VM creation wizard that appears:
-    *    /Name and operating system/:
-        *    Type: Linux
-        *    Version: Ubuntu (64-bit)
-    *    Memory size: at least 1024 MB
-    *    /Hard drive/:
-        *    Use an existing virtual drive file, and select the disk image you unzipped.
+     *    /Name and operating system/:
+          *    Type: Linux
+          *    Version: Ubuntu (64-bit)
+     *    Memory size: at least 1024 MB
+     *    /Hard drive/:
+          *    Use an existing virtual drive file, and select the disk image you unzipped.
 
 Then, start the VM by selecting it and pressing the 'Start' button at the top of the VirtualBox VM Manager window.
 
