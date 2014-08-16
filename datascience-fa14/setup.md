@@ -10,6 +10,7 @@ In this class, we will all be using the same Virtual Machines to complete assign
 *Note: While you should also be able to set up a similar environment on your machine without needing a Virtual Machine, the course staff will not support such configurations - so you’re on your own if you choose to go that route!*
 
 To create a VM using our [disk image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip):
+
 1.   Download and install [VirtualBox](https://www.virtualbox.org).
 2.   Download and unzip our VirtualBox disk image [here](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip).
 3.   Open VirtualBox and click the 'New' button.
