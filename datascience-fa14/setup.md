@@ -1,7 +1,7 @@
---
+---
 title: Setting Up Your Environment
 layout: default
---
+---
 
 # Setting Up Your Environment
 
