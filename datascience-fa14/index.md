@@ -128,7 +128,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> Due! Submit using glookup</td>
     </tr>
         <tr>
-      <td>M 10/1</td>
+      <td>M 10/6</td>
       <td>L5: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/pub/josh-wills/0/82b/138">Josh Wills, Director of Data Science, Cloudera</a>; followed by: 
       <br>
       Part 2- Data Integration (w/Pandas)
@@ -147,7 +147,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>M 10/8</td>
+      <td>M 10/13</td>
       <td>L6: Exploratory Data Analysis (with Python lab)
        <a href="http://goo.gl/8w8Mkb">[PPTX]</a>
        <a href="http://goo.gl/rikI8i">[PDF]</a>
@@ -169,7 +169,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1</td>
     </tr>
     <tr>
-      <td>M 10/15</td>
+      <td>M 10/20</td>
       <td>L7: Regression, Classification, intro to Supervised Learning (with R Lab)<br>
         Part 1:<a href="http://goo.gl/WKx4jz">[PPTX]</a> <a href="http://goo.gl/8EFuWI">[PDF]</a>
         Part 2:<a href="http://goo.gl/GNnU8i">[PPTX]</a> <a href="http://goo.gl/CGgRY7">[PDF]</a><br>
@@ -184,12 +184,12 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr> 
     <tr>
-      <td>M 10/22</td>
+      <td>M 10/27</td>
       <td></td>
       <td></td>
     </tr> 
     <tr>
-      <td>M 10/29</td>
+      <td>M 11/3</td>
       <td>L8: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/in/peterskomoroch">Peter Skomoroch</a>; Slides: <a href="http://goo.gl/NbQxvE">[PDF](29MB)</a>; followed by:
       <br>
         Part2 - <a href="http://goo.gl/e50eqQ">Unsupervised Learning and K-Means Clustering </a> (in Python)
@@ -209,7 +209,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/Jpneux">Homework 2</a> Due. Submit using glookup</td>
     </tr>
     <tr>
-      <td>M 4/7</td>
+      <td>M 11/10</td>
       <td>L9: Scaling Up Analytics (with Spark/EC2 Lab); Guest Lecturer: <a href="http://www.eecs.berkeley.edu/~keo/"> Kay Ousterhout</a> <a href="http://goo.gl/l4Stce">[PDF]</a> <a href="http://goo.gl/M23eAE">[PPTX]</a></td>
       <td>"MapReduce," "Word Frequency Problem", and "Other Examples of MapReduce" sections from O'Reilly "Doing Data Science" book (available <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/14dot-data-engineering-mapreduce-pregel-and-hadoop/_mapreduce_html"> online</a> or from the library) and <a href="http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf">Spark Short paper</a></td>
       <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> <a href="http://goo.gl/Y1Bom6"> Lab 8 </a> <br>
@@ -222,7 +222,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>Final Project update due on glookup</td>
     </tr> 
     <tr>
-      <td>M 4/14</td>
+      <td>M 11/17</td>
       <td>
           L10: Visualization (D3 lab)<a href="http://goo.gl/LWNBKw">[PPTX]</a> <a href="http://goo.gl/RKEsCP">[PDF]</a><br>
           <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
@@ -251,7 +251,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 4/25.</td>
     </tr> 
     <tr>
-      <td>M 4/21</td>
+      <td>M 11/24</td>
       <td>L11: Graph Processing (with GraphX Lab); Guest Lecturers: <a href="http://www.cs.berkeley.edu/~jegonzal/">Joey Gonzalez</a> and <a href="https://github.com/dcrankshaw">Dan Crankshaw</a>  <br>
       <a href="http://goo.gl/J1MeuJ">[PPTX]</a>(19MB) <a href="http://goo.gl/Xb87gO">[PDF]</a>(19MB)<br>
       </td>
@@ -269,7 +269,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> due</td>
     </tr> 
     <tr>
-      <td>M 4/28</td>
+      <td>M 12/1</td>
       <td>L12: Putting it All Together</td>
       <td></td>
       <td><a href="http://goo.gl/PoLg6p">Bunny 12</a> by 5pm</td>
