@@ -15,25 +15,29 @@ To create a VM using our [disk image](https://www.eecs.berkeley.edu/~charles/dat
 2.   Download and unzip our VirtualBox disk image [here](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip).
 3.   Open VirtualBox and click the 'New' button.
 4.   Select the following options in the VM creation wizard that appears:
-     *    /Name and operating system/:
+     *    _Name and operating system_:
           *    Type: Linux
           *    Version: Ubuntu (64-bit)
      *    Memory size: at least 1024 MB
-     *    /Hard drive/:
+     *    _Hard drive_:
           *    Use an existing virtual drive file, and select the disk image you unzipped.
 
 Then, start the VM by selecting it and pressing the 'Start' button at the top of the VirtualBox VM Manager window.
 
-The VM should automatically log you into an account called 'datascience'. The password for this account is
-'datascience'. If you need to run commands with root (adminstrator) privalleges, you can use `sudo`.
+## Credentials
 
-# No 64-bit support? 
+The VM should automatically log you into an account called `datascience`. The password for this account is
+`datascience`. If you need to run commands with root (adminstrator) privalleges, you can use `sudo`.
 
-In the unlikely event that your machine cannot support a 64-bit virtual machine, we also have a [32-bit image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-i386.vdi). Configuration instructions are the same, except that you should select /Version: Ubuntu (32-bit)/ instead of /Version: Ubuntu (64-bit)/.
+## Information you should not need
+
+### No 64-bit support? 
+
+In the unlikely event that your machine cannot support a 64-bit virtual machine, we also have a [32-bit image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-i386.vdi). Configuration instructions are the same, except that you should select _Version: Ubuntu (32-bit)_ instead of _Version: Ubuntu (64-bit)_.
 
 We believe that machines that cannot support a 64-bit VM are *extremely* rare, so please inform the course staff if you need this.
 
-# Software installed in the VM
+### Software installed in the VM
 
 The virtual machine image we supplied is setup using [this script](https://github.com/woggle/datascience-vm-scripts/blob/master/post-build-script.sh). The notable pieces of software this installs are:
 
