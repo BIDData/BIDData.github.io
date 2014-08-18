@@ -27,10 +27,7 @@ manipulate data sets with code.
   - GSIs - ? at ? Soda
 
 ## Pre-requisites
-Pre-requisites for this course include 61A, 61B, 61C and basic programming
-skills. Knowledge of Python will be useful for the assignments. Students
-will also be expected to run [VirtualBox](https://www.virtualbox.org/) on their laptops
-for the assignments.
+Pre-requisites for this course include 61A, 61B, 61C and basic programming skills. Knowledge of Python will be useful for the assignments, and a few will also use the Scala language. Students will also be expected to run [VirtualBox](https://www.virtualbox.org/) on their laptops for the assignments.
 
 Please take the class survey [here](https://docs.google.com/a/berkeley.edu/forms/d/1LWuhIdR8_y7FX2WeI5wAlwX2vDeaPo1E5ghAeUHUEBs/viewform).
 
