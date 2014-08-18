@@ -55,7 +55,7 @@ Plese set up your machine according to [these instuctions](setup.html).
   </thead>
   <tbody>
     <tr>
-      <td>M 1/27</td>
+      <td>W 9/3</td>
       <td>L1: Introduction/Data Science Process
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfWi1XNTBpVXh5Vms/edit?usp=sharing">[PPTX]</a>
         
@@ -65,7 +65,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
     </tr>
     <tr>
-      <td>M 2/3</td>
+      <td>M 9/8</td>
       <td>L2: Data Preparation  (w/Unix Shell Lab)
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfYjQ5d0pzTDRFR0k/edit?usp=sharing">[PPTX]</a>
         
@@ -80,7 +80,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>M 2/10</td>
+      <td>M 9/15</td>
       <td>L3: Tabular Data (w/Pandas Lab) 
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfOHRmTkxQYmhWdHM/edit?usp=sharing">[PPTX]</a>
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1BPeFlETndrLXc/edit?usp=sharing">[PDF]</a>
@@ -104,13 +104,12 @@ Plese set up your machine according to [these instuctions](setup.html).
  
     </tr>
     <tr>
-      <td>M 2/17</td>
-      <td>No class - President's Day</td>
+      <td>M 9/22</td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>M 2/24</td>
+      <td>M 9/29</td>
       <td>L4: Data Cleaning (w/Open Refine Lab)
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1RrSWwwbDNrVkk/edit?usp=sharing">[PPTX]</a>
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfcENuLWE2UTlPMEk/edit?usp=sharing">[PDF]</a>
@@ -129,7 +128,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> Due! Submit using glookup</td>
     </tr>
         <tr>
-      <td>M 3/3</td>
+      <td>M 10/1</td>
       <td>L5: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/pub/josh-wills/0/82b/138">Josh Wills, Director of Data Science, Cloudera</a>; followed by: 
       <br>
       Part 2- Data Integration (w/Pandas)
@@ -148,7 +147,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>M 3/10</td>
+      <td>M 10/8</td>
       <td>L6: Exploratory Data Analysis (with Python lab)
        <a href="http://goo.gl/8w8Mkb">[PPTX]</a>
        <a href="http://goo.gl/rikI8i">[PDF]</a>
@@ -170,7 +169,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1</td>
     </tr>
     <tr>
-      <td>M 3/17</td>
+      <td>M 10/15</td>
       <td>L7: Regression, Classification, intro to Supervised Learning (with R Lab)<br>
         Part 1:<a href="http://goo.gl/WKx4jz">[PPTX]</a> <a href="http://goo.gl/8EFuWI">[PDF]</a>
         Part 2:<a href="http://goo.gl/GNnU8i">[PPTX]</a> <a href="http://goo.gl/CGgRY7">[PDF]</a><br>
@@ -185,13 +184,12 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr> 
     <tr>
-      <td>M 3/24</td>
-      <td>No Lecture: Spring Break</td>
+      <td>M 10/22</td>
       <td></td>
       <td></td>
     </tr> 
     <tr>
-      <td>M 3/31</td>
+      <td>M 10/29</td>
       <td>L8: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/in/peterskomoroch">Peter Skomoroch</a>; Slides: <a href="http://goo.gl/NbQxvE">[PDF](29MB)</a>; followed by:
       <br>
         Part2 - <a href="http://goo.gl/e50eqQ">Unsupervised Learning and K-Means Clustering </a> (in Python)
