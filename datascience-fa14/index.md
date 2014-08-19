@@ -90,7 +90,8 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1BPeFlETndrLXc/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-      Pandas Lab
+        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab2">Lab 2</a>
+      Pandas 
       </td>
       <td><a href="http://www.eecs.berkeley.edu/~franklin/Papers/dataspaceSR.pdf">From Databases to Dataspaces: A New Abstraction for Information Management</a>
         <br>
@@ -98,8 +99,6 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td>
         <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 2/10
-        <br>
-        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab2">Lab 2</a>
         <!-- | <a href="http://goo.gl/FdlCwM">Responses</a> -->
       </td>
     </tr>
@@ -124,12 +123,12 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfcENuLWE2UTlPMEk/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-      OpenRefine Lab
+              <a href="https://github.com/amplab/datascience-sp14/tree/master/lab3">Lab 3</a>
+      OpenRefine
       </td>
       <td>
       </td>
       <td>
-        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab3">Lab 3</a>
         <!-- | <a href="http://goo.gl/fyzN4G">Responses</a> -->
       </td>
     </tr>
@@ -146,7 +145,8 @@ Plese set up your machine according to [these instuctions](setup.html).
        <a href="http://goo.gl/p6SGyA">[PDF]</a>
        </td>
        <td>
-       Pandas Lab
+       <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab4/joins.ipynb">Lab 4</a>
+       Pandas
        </td>
       <td><a href="http://yz.mit.edu/papers/webtables-vldb08.pdf">WebTables: Exploring the Power of Tables on the Web (Sections 1,2 and 4; others optional)</a>
         <br>
@@ -154,7 +154,6 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td>
       <a href="https://docs.google.com/a/berkeley.edu/forms/d/1iJNN8LVeqJl2fAZhdKuhbQWWWS31Sz18GlocQozOXSQ/viewform">Bunny 3</a> by 5pm;
-      <br> <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab4/joins.ipynb">Lab 4</a> 
       <!-- | <a href="http://goo.gl/ZgfzAN">Responses</a> -->
       <br> <a href="http://goo.gl/YFnAmH">Final Project Group Lists</a> Due Midnight 
       </td>
