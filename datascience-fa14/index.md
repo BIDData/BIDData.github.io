@@ -100,15 +100,8 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>
         <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 9/15
         <!-- | <a href="http://goo.gl/FdlCwM">Responses</a> -->
+        <br/><a href="http://goo.gl/Pkku0e">Homework 1</a> out. Due by 10/2
       </td>
-    </tr>
-    <tr>
-      <td>F 2/14</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="http://goo.gl/Pkku0e">Homework 1</a> out. Due by 2/28</td>
- 
     </tr>
     <tr>
       <td>M 9/22</td>
@@ -133,7 +126,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>F 2/28</td>
+      <td>Th 10/2</td>
       <td></td>
       <td></td>
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> Due! Submit using glookup</td>
@@ -175,15 +168,10 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td><a href="http://goo.gl/tiHqU2">Bunny 4</a> by 5pm;
       <!-- | <a href="http://goo.gl/ZDS8Rb">Responses</a> -->
-      <br>Final Project Proposals due Tues 3/11 Midnight.</td>
+      <br>Final Project Proposals due Thurs 3/11 Midnight.</td>
+      <br/><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1
     </tr>  
-    <tr>
-      <td>T 3/11</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1</td>
-    </tr>
+
     <tr>
       <td>M 10/20</td>
       <td>L7: Regression, Classification, intro to Supervised Learning<br>
