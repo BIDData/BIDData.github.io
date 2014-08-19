@@ -42,7 +42,7 @@ Plese set up your machine according to [these instuctions](setup.html).
                                   <a href="http://goo.gl/Jpneux">Homework 2</a>; Homework 3)  
 * "Bunnies" : 5%
 
-## Schedule
+## Schedule (warning - very early draft!)
 
 <table class="table table-striped">
   <thead>
