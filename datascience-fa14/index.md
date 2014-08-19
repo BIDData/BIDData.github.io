@@ -74,13 +74,12 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfN24xejYyc1JCMkk/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-      Unix Shell
+        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab1">Lab 1</a>
+      Unix
       </td>
       <td><a href="http://vis.stanford.edu/files/2012-EnterpriseAnalysisInterviews-VAST.pdf">Enterprise Data Analysis and Visualization: An Interview Study</a></td>
       <td>
         <a href="http://goo.gl/SqDnW6">Bunny 1</a> by 5pm on 2/3
-        <br>
-        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab1">Lab 1</a>
         <!-- | <a href="http://goo.gl/VPhVGW">Responses</a> -->
       </td>
     </tr>
