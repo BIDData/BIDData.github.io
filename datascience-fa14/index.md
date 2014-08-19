@@ -108,6 +108,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>M 9/29</td>
@@ -127,6 +128,7 @@ Plese set up your machine according to [these instuctions](setup.html).
     </tr>
     <tr>
       <td>Th 10/2</td>
+      <td></td>
       <td></td>
       <td></td>
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> Due! Submit using glookup</td>
@@ -169,7 +171,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td><a href="http://goo.gl/tiHqU2">Bunny 4</a> by 5pm;
       <!-- | <a href="http://goo.gl/ZDS8Rb">Responses</a> -->
       <br>Final Project Proposals due Thurs 3/11 Midnight.
-      <br/><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1</td>
+      <br/><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 11/6</td>
     </tr>  
 
     <tr>
@@ -213,7 +215,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr> 
     <tr>
-      <td>T 4/1</td>
+      <td>Th 11/6</td>
       <td></td>
       <td></td>
       <td></td>
