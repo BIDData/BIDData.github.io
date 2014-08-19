@@ -79,7 +79,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td><a href="http://vis.stanford.edu/files/2012-EnterpriseAnalysisInterviews-VAST.pdf">Enterprise Data Analysis and Visualization: An Interview Study</a></td>
       <td>
-        <a href="http://goo.gl/SqDnW6">Bunny 1</a> by 5pm on 2/3
+        <a href="http://goo.gl/SqDnW6">Bunny 1</a> by 5pm on 9/8
         <!-- | <a href="http://goo.gl/VPhVGW">Responses</a> -->
       </td>
     </tr>
@@ -98,7 +98,7 @@ Plese set up your machine according to [these instuctions](setup.html).
         <a href="http://hadapt.com/schemaless-sql-overview/">Schemaless SQL</a> and <a href="http://www.youtube.com/watch?v=cfEYEah1XMg">Schema on Write vs. Schema on Read</a>
       </td>
       <td>
-        <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 2/10
+        <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 9/15
         <!-- | <a href="http://goo.gl/FdlCwM">Responses</a> -->
       </td>
     </tr>
