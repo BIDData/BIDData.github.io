@@ -234,9 +234,9 @@ Plese set up your machine according to [these instuctions](setup.html).
     <tr>
       <td>M 11/10</td>
       <td>L9: Scaling Up Analytics; <a href="http://goo.gl/l4Stce">[PDF]</a> <a href="http://goo.gl/M23eAE">[PPTX]</a></td>
-      <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> <a href="http://goo.gl/Y1Bom6"> Lab 8 </a>Spark/EC2</td>
+      <td><a href="http://goo.gl/Y1Bom6"> Lab 8 </a>Spark/EC2</td>
       <td>"MapReduce," "Word Frequency Problem", and "Other Examples of MapReduce" sections from O'Reilly "Doing Data Science" book (available <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/14dot-data-engineering-mapreduce-pregel-and-hadoop/_mapreduce_html"> online</a> or from the library) and <a href="http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf">Spark Short paper</a></td>
-      <td>
+      <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> 
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> Due 4/14</td>
     </tr> 
     <tr>
@@ -252,7 +252,7 @@ Plese set up your machine according to [these instuctions](setup.html).
           L10: Visualization (D3 lab)<a href="http://goo.gl/LWNBKw">[PPTX]</a> <a href="http://goo.gl/RKEsCP">[PDF]</a><br>
           
       </td>
-      <td>           <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab9/lab9.ipynb">Lab 9</a>Visualization <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
+      <td>           <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab9/lab9.ipynb">Lab 9</a> Visualization <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
       </td>
       <td>
         <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/9dot-data-visualization-and-fraud-detection/ch09_html">Chapter 9 on Data Visualization</a> from "Doing Data Science" available online or from the library.<br>
