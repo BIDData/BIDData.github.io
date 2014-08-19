@@ -165,7 +165,8 @@ Plese set up your machine according to [these instuctions](setup.html).
        <a href="http://goo.gl/rikI8i">[PDF]</a>
       </td>
       <td>
-      Python Lab
+    <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab5/lab5.ipynb">Lab 5</a>
+      Python 
       </td>
       <td><a href="http://proquest.safaribooksonline.com/9781449363871/_statistical_thinking_in_the_age_of_big_data_html">Statistical Thinking in the Age of Big Data</a>
       <br><a href="http://proquest.safaribooksonline.com/9781449363871/_exploratory_data_analysis_html">Exploratory Data Analysis</a><br>
@@ -173,7 +174,6 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="http://www.sagepub.com/upm-data/40007_Chapter8.pdf">Introduction to Hypothesis Testing</a>
       </td>
       <td><a href="http://goo.gl/tiHqU2">Bunny 4</a> by 5pm;
-      <br><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab5/lab5.ipynb">Lab 5</a>
       <!-- | <a href="http://goo.gl/ZDS8Rb">Responses</a> -->
       <br>Final Project Proposals due Tues 3/11 Midnight.</td>
     </tr>  
@@ -192,13 +192,13 @@ Plese set up your machine according to [these instuctions](setup.html).
         <a href="http://goo.gl/Hh6CwR">Homework Tips</a>
       </td>
       <td>
-      R Lab
+                <a href="https://github.com/amplab/datascience-sp14/tree/master/lab6">Lab 6</a>
+      R
       </td>
       <td><a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/3dot-algorithms/_three_basic_algorithms_html"> Three Basic Algorithms</a>
       From the O'Reilly Book "Doing Data Science" - available on campus or via the library VPN.<br>
       </td>
       <td><a href="http://goo.gl/y4IvKu">Bunny 5</a> by 5pm <br>
-          <a href="https://github.com/amplab/datascience-sp14/tree/master/lab6">Lab 6</a> 
           <!-- | <a href="http://goo.gl/7kUpAb">Responses</a> --> 
       </td>
     </tr> 
@@ -215,12 +215,12 @@ Plese set up your machine according to [these instuctions](setup.html).
         Part2 - <a href="http://goo.gl/e50eqQ">Unsupervised Learning and K-Means Clustering </a> (in Python)
       </td>
       <td>
+                <a href="http://goo.gl/nzDvVk">Lab 7</a> Python
       </td>
       <td>K-Nearest Neighbors and K-Means clustering from <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/3dot-algorithms/_three_basic_algorithms_html"> Three Basic Algorithms</a>.
       Part of the O'Reilly Book "Doing Data Science" - available on campus or via the library VPN.<br>
       </td>
       <td>No Bunny ! <br> 
-          <a href="http://goo.gl/nzDvVk">Lab 7</a>
           <!--| <a href="http://goo.gl/PKUQio">Responses</a> -->
       </td>
     </tr> 
@@ -234,9 +234,9 @@ Plese set up your machine according to [these instuctions](setup.html).
     <tr>
       <td>M 11/10</td>
       <td>L9: Scaling Up Analytics; <a href="http://goo.gl/l4Stce">[PDF]</a> <a href="http://goo.gl/M23eAE">[PPTX]</a></td>
-      <td>Spark/EC2 Lab</td>
+      <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> <a href="http://goo.gl/Y1Bom6"> Lab 8 </a>Spark/EC2</td>
       <td>"MapReduce," "Word Frequency Problem", and "Other Examples of MapReduce" sections from O'Reilly "Doing Data Science" book (available <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/14dot-data-engineering-mapreduce-pregel-and-hadoop/_mapreduce_html"> online</a> or from the library) and <a href="http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf">Spark Short paper</a></td>
-      <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> <a href="http://goo.gl/Y1Bom6"> Lab 8 </a> <br>
+      <td>
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> Due 4/14</td>
     </tr> 
     <tr>
@@ -252,7 +252,7 @@ Plese set up your machine according to [these instuctions](setup.html).
           L10: Visualization (D3 lab)<a href="http://goo.gl/LWNBKw">[PPTX]</a> <a href="http://goo.gl/RKEsCP">[PDF]</a><br>
           
       </td>
-      <td> Visualization Lab <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
+      <td>           <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab9/lab9.ipynb">Lab 9</a>Visualization <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
       </td>
       <td>
         <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/9dot-data-visualization-and-fraud-detection/ch09_html">Chapter 9 on Data Visualization</a> from "Doing Data Science" available online or from the library.<br>
@@ -262,7 +262,6 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>
           <a href="http://goo.gl/FPYhKm">Bunny 10</a> by 5pm<br>
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> due<br>
-          <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab9/lab9.ipynb">Lab 9</a>
       </td>
     </tr> 
     <tr>
@@ -285,13 +284,12 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="http://goo.gl/J1MeuJ">[PPTX]</a>(19MB) <a href="http://goo.gl/Xb87gO">[PDF]</a>(19MB)<br>
       </td>
       <td>
-      Graphx Lab
+              <a href="http://goo.gl/MNC56V">Lab 10</a> <!-- | <a href="http://goo.gl/VzFGkH">Responses<a/> --> Graphx
       </td>
       <td><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch02.pdf">Chapter 2</a> from "Networks, Crowds, and Markets: Reasoning About a Highly Connected World"
       </td>
       <td>
-        <a href="http://goo.gl/WnPMZG">Bunny 11</a> by 5pm<br>
-        <a href="http://goo.gl/MNC56V">Lab 10</a> <!-- | <a href="http://goo.gl/VzFGkH">Responses<a/> -->
+        <a href="http://goo.gl/WnPMZG">Bunny 11</a> by 5pm
       </td>
     </tr>
     <tr>
