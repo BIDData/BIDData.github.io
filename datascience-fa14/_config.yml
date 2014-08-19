@@ -1,0 +1,7 @@
+safe: true
+lsi: false
+pygments: true
+
+markdown: kramdown
+permalink: none
+name: Introduction to Data Science
