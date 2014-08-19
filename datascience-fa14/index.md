@@ -47,7 +47,8 @@ Plese set up your machine according to [these instuctions](setup.html).
 <table class="table table-striped">
   <thead>
     <tr>
-      <td><b>Class Date</b></td>
+      <td><b>Lecture Date</b></td>
+      <td><b>Weds Lab</b></td>
       <td><b>Lecture Material</b></td>
       <td><b>Reading</b></td>
       <td><b>Assignments</b></td>
@@ -61,15 +62,19 @@ Plese set up your machine according to [these instuctions](setup.html).
         
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfajJPcURYcTJHekk/edit?usp=sharing">[PDF]</a>
       </td>
+      <td>No Lab</td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>M 9/8</td>
-      <td>L2: Data Preparation  (w/Unix Shell Lab)
+      <td>L2: Data Preparation 
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfYjQ5d0pzTDRFR0k/edit?usp=sharing">[PPTX]</a>
         
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfN24xejYyc1JCMkk/edit?usp=sharing">[PDF]</a>
+      </td>
+      <td>
+      Unix Shell
       </td>
       <td><a href="http://vis.stanford.edu/files/2012-EnterpriseAnalysisInterviews-VAST.pdf">Enterprise Data Analysis and Visualization: An Interview Study</a></td>
       <td>
