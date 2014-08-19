@@ -129,9 +129,7 @@ Plese set up your machine according to [these instuctions](setup.html).
     </tr>
         <tr>
       <td>M 10/6</td>
-      <td>L5: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/pub/josh-wills/0/82b/138">Josh Wills, Director of Data Science, Cloudera</a>; followed by: 
-      <br>
-      Part 2- Data Integration (w/Pandas)
+      <td>L5- Data Integration (w/Pandas)
        <a href="http://goo.gl/Ytri9e">[PPTX]</a>
        <a href="http://goo.gl/p6SGyA">[PDF]</a>
        </td>
@@ -190,7 +188,7 @@ Plese set up your machine according to [these instuctions](setup.html).
     </tr> 
     <tr>
       <td>M 11/3</td>
-      <td>L8: Part 1 - Guest Lecture: <a href="http://www.linkedin.com/in/peterskomoroch">Peter Skomoroch</a>; Slides: <a href="http://goo.gl/NbQxvE">[PDF](29MB)</a>; followed by:
+      <td>L8: Data Products, Slides: <a href="http://goo.gl/NbQxvE">[PDF](29MB)</a>; followed by:
       <br>
         Part2 - <a href="http://goo.gl/e50eqQ">Unsupervised Learning and K-Means Clustering </a> (in Python)
       </td>
@@ -210,7 +208,7 @@ Plese set up your machine according to [these instuctions](setup.html).
     </tr>
     <tr>
       <td>M 11/10</td>
-      <td>L9: Scaling Up Analytics (with Spark/EC2 Lab); Guest Lecturer: <a href="http://www.eecs.berkeley.edu/~keo/"> Kay Ousterhout</a> <a href="http://goo.gl/l4Stce">[PDF]</a> <a href="http://goo.gl/M23eAE">[PPTX]</a></td>
+      <td>L9: Scaling Up Analytics (with Spark/EC2 Lab); <a href="http://goo.gl/l4Stce">[PDF]</a> <a href="http://goo.gl/M23eAE">[PPTX]</a></td>
       <td>"MapReduce," "Word Frequency Problem", and "Other Examples of MapReduce" sections from O'Reilly "Doing Data Science" book (available <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/14dot-data-engineering-mapreduce-pregel-and-hadoop/_mapreduce_html"> online</a> or from the library) and <a href="http://people.csail.mit.edu/matei/papers/2010/hotcloud_spark.pdf">Spark Short paper</a></td>
       <td><a href="http://goo.gl/Q4S856">Bunny 9</a> by 5pm <br> <a href="http://goo.gl/Y1Bom6"> Lab 8 </a> <br>
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> Due 4/14</td>
