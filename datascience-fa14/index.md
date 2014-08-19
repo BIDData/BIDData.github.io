@@ -48,8 +48,8 @@ Plese set up your machine according to [these instuctions](setup.html).
   <thead>
     <tr>
       <td><b>Lecture Date</b></td>
-      <td><b>Weds Lab</b></td>
       <td><b>Lecture Material</b></td>
+      <td><b>Weds Lab</b></td>
       <td><b>Reading</b></td>
       <td><b>Assignments</b></td>
     </tr>
@@ -86,9 +86,12 @@ Plese set up your machine according to [these instuctions](setup.html).
     </tr>
     <tr>
       <td>M 9/15</td>
-      <td>L3: Tabular Data (w/Pandas Lab) 
+      <td>L3: Tabular Data 
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfOHRmTkxQYmhWdHM/edit?usp=sharing">[PPTX]</a>
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1BPeFlETndrLXc/edit?usp=sharing">[PDF]</a>
+      </td>
+      <td>
+      Pandas Lab
       </td>
       <td><a href="http://www.eecs.berkeley.edu/~franklin/Papers/dataspaceSR.pdf">From Databases to Dataspaces: A New Abstraction for Information Management</a>
         <br>
@@ -105,11 +108,13 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>F 2/14</td>
       <td></td>
       <td></td>
+      <td></td>
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> out. Due by 2/28</td>
  
     </tr>
     <tr>
       <td>M 9/22</td>
+      <td></td>
       <td></td>
       <td></td>
     </tr>
@@ -118,6 +123,9 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>L4: Data Cleaning (w/Open Refine Lab)
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1RrSWwwbDNrVkk/edit?usp=sharing">[PPTX]</a>
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfcENuLWE2UTlPMEk/edit?usp=sharing">[PDF]</a>
+      </td>
+      <td>
+      OpenRefine Lab
       </td>
       <td>
       </td>
