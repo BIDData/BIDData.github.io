@@ -9,10 +9,10 @@ In this class, we will all be using the same Virtual Machines to complete assign
 
 *Note: While you should also be able to set up a similar environment on your machine without needing a Virtual Machine, the course staff will not support such configurations - so you’re on your own if you choose to go that route!*
 
-To create a VM using our [disk image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip):
+To create a VM using our [disk image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/image-amd64.vdi.zip):
 
 1.   Download and install [VirtualBox](https://www.virtualbox.org).
-2.   Download and unzip our VirtualBox disk image [here](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-amd64.vdi.zip).
+2.   Download and unzip our VirtualBox disk image [here](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/image-amd64.vdi.zip).
 3.   Open VirtualBox and click the 'New' button.
 4.   Select the following options in the VM creation wizard that appears:
      *    _Name and operating system_:
@@ -33,13 +33,13 @@ The VM should automatically log you into an account called `datascience`. The pa
 
 ### No 64-bit support? 
 
-In the unlikely event that your machine cannot support a 64-bit virtual machine, we also have a [32-bit image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/images-i386.vdi). Configuration instructions are the same, except that you should select _Version: Ubuntu (32-bit)_ instead of _Version: Ubuntu (64-bit)_.
+In the unlikely event that your machine cannot support a 64-bit virtual machine, we also have a [32-bit image](https://www.eecs.berkeley.edu/~charles/datascience-fa14-images/image-i386.vdi). Configuration instructions are the same, except that you should select _Version: Ubuntu (32-bit)_ instead of _Version: Ubuntu (64-bit)_.
 
 We believe that machines that cannot support a 64-bit VM are *extremely* rare, so please inform the course staff if you need this.
 
 ### Software installed in the VM
 
-The virtual machine image we supplied is setup using [this script](https://github.com/woggle/datascience-vm-scripts/blob/master/post-build-script.sh). The notable pieces of software this installs are:
+The virtual machine image we supplied is setup using [this script](https://github.com/woggle/datascience-vm-scripts/blob/master/post-build-script.sh), which should also work on a Ubuntu-like system (but this is not supported by the course staff). The notable pieces of software this installs are:
 
 *   [ipython](http://ipython.org/)
 *   [pandas](http://pandas.pydata.org/)
@@ -52,3 +52,4 @@ The virtual machine image we supplied is setup using [this script](https://githu
 *   [scikit-learn](http://http://scikit-learn.org/stable/)
 *   [python-levenshtien](https://pypi.python.org/pypi/python-Levenshtein/)
 *   [graphviz](http://www.graphviz.org/) and [pydot](https://pypi.python.org/pypi/pydot)
+*   [BIDMach](http://bid2.berkeley.edu/bid-data-project/download/)
