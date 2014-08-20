@@ -170,9 +170,15 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td><a href="http://goo.gl/tiHqU2">Bunny 4</a> by 5pm;
       <!-- | <a href="http://goo.gl/ZDS8Rb">Responses</a> -->
-      <br>Final Project Proposals due Thurs 3/11 Midnight.
-      <br/><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 11/6</td>
-    </tr>  
+      <br>Final Project Proposals due Thurs 10/16 Midnight.
+      <br><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 11/6</td>
+    </tr>
+    <tr>
+      <td>Th 10/16</td>
+      <td/>
+      <td/>
+      <td><a href="http://goo.gl/Jpneux">Homework 2</a> Due.</td>
+    </tr>
 
     <tr>
       <td>M 10/20</td>
