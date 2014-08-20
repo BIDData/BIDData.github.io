@@ -256,18 +256,11 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr> 
     <tr>
-      <td>Th 4/17</td>
+      <td>TBD</td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Midterm - 6.00 to 7.30 pm</td>
-    </tr> 
-    <tr>
-      <td>F 4/18</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>Midterm - 5.30 to 7.00 pm</td>
     </tr> 
     <tr>
       <td>M 11/24</td>
