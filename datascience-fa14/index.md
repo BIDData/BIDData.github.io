@@ -260,6 +260,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>
           <a href="http://goo.gl/FPYhKm">Bunny 10</a> by 5pm<br>
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> due<br>
+          <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 11/25.
       </td>
     </tr> 
     <tr>
@@ -274,7 +275,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 4/25.</td>
+      <td></td>
     </tr> 
     <tr>
       <td>M 11/24</td>
@@ -291,7 +292,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>F 4/25</td>
+      <td>Tu 11/25</td>
       <td></td>
       <td></td>
       <td></td>
