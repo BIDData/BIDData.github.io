@@ -174,14 +174,6 @@ Plese set up your machine according to [these instuctions](setup.html).
       <br><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 11/6</td>
     </tr>
     <tr>
-      <td>Th 10/16</td>
-      <td/>
-      <td/>
-      <td/>
-      <td><a href="http://goo.gl/Jpneux">Homework 2</a> Due.</td>
-    </tr>
-
-    <tr>
       <td>M 10/20</td>
       <td>L7: Regression, Classification, intro to Supervised Learning<br>
         Part 1:<a href="http://goo.gl/WKx4jz">[PPTX]</a> <a href="http://goo.gl/8EFuWI">[PDF]</a>
