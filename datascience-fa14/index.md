@@ -17,7 +17,7 @@ manipulate data sets with code.
 
 * Course Number: CS 194-16, CS 294-16 Fall 2014, UC Berkeley
 * Instructor: [John Canny](http://cs.berkeley.edu/~jfc)
-* Time: MW 5.30pm - 7pm
+* Time: MW 5pm - 6:30pm
 * Location: 145 Moffit
 * Teaching Assistants: [Charles Reiss](https://www.eecs.berkeley.edu/~charles)
 * Discussion: Join [Piazza](https://piazza.com/class/) for
