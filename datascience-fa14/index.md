@@ -177,6 +177,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>Th 10/16</td>
       <td/>
       <td/>
+      <td/>
       <td><a href="http://goo.gl/Jpneux">Homework 2</a> Due.</td>
     </tr>
 
