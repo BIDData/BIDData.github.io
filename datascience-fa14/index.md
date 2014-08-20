@@ -260,7 +260,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
-      <td>Midterm - 5.30 to 7.00 pm</td>
+      <td>Midterm - 5.00 to 6.30 pm</td>
     </tr> 
     <tr>
       <td>M 11/24</td>
