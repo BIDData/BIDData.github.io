@@ -204,6 +204,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr> 
     <tr>
       <td>M 11/3</td>
