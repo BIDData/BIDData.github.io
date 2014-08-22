@@ -17,7 +17,7 @@ manipulate data sets with code.
 
 * Course Number: CS 194-16, CS 294-16 Fall 2014, UC Berkeley
 * Instructor: [John Canny](http://cs.berkeley.edu/~jfc)
-* Time: MW 5.30pm - 6pm
+* Time: MW 5pm - 6:30pm
 * Location: 145 Moffit
 * Teaching Assistants: [Charles Reiss](https://www.eecs.berkeley.edu/~charles)
 * Discussion: Join [Piazza](https://piazza.com/class/) for
@@ -79,7 +79,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td><a href="http://vis.stanford.edu/files/2012-EnterpriseAnalysisInterviews-VAST.pdf">Enterprise Data Analysis and Visualization: An Interview Study</a></td>
       <td>
-        <a href="http://goo.gl/SqDnW6">Bunny 1</a> by 5pm on 2/3
+        <a href="http://goo.gl/SqDnW6">Bunny 1</a> by 5pm on 9/8
         <!-- | <a href="http://goo.gl/VPhVGW">Responses</a> -->
       </td>
     </tr>
@@ -98,20 +98,14 @@ Plese set up your machine according to [these instuctions](setup.html).
         <a href="http://hadapt.com/schemaless-sql-overview/">Schemaless SQL</a> and <a href="http://www.youtube.com/watch?v=cfEYEah1XMg">Schema on Write vs. Schema on Read</a>
       </td>
       <td>
-        <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 2/10
+        <a href="http://goo.gl/X6ASom">Bunny 2</a> by 5pm on 9/15
         <!-- | <a href="http://goo.gl/FdlCwM">Responses</a> -->
+        <br/><a href="http://goo.gl/Pkku0e">Homework 1</a> out. Due by 10/2
       </td>
     </tr>
     <tr>
-      <td>F 2/14</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="http://goo.gl/Pkku0e">Homework 1</a> out. Due by 2/28</td>
- 
-    </tr>
-    <tr>
       <td>M 9/22</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -133,7 +127,8 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>F 2/28</td>
+      <td>Th 10/2</td>
+      <td></td>
       <td></td>
       <td></td>
       <td><a href="http://goo.gl/Pkku0e">Homework 1</a> Due! Submit using glookup</td>
@@ -175,14 +170,8 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
       <td><a href="http://goo.gl/tiHqU2">Bunny 4</a> by 5pm;
       <!-- | <a href="http://goo.gl/ZDS8Rb">Responses</a> -->
-      <br>Final Project Proposals due Tues 3/11 Midnight.</td>
-    </tr>  
-    <tr>
-      <td>T 3/11</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 4/1</td>
+      <br>Final Project Proposals due Thurs 10/16 Midnight.
+      <br><a href="http://goo.gl/Jpneux">Homework 2</a> out. Due by 11/6</td>
     </tr>
     <tr>
       <td>M 10/20</td>
@@ -207,6 +196,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr> 
     <tr>
       <td>M 11/3</td>
@@ -225,7 +215,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr> 
     <tr>
-      <td>T 4/1</td>
+      <td>Th 11/6</td>
       <td></td>
       <td></td>
       <td></td>
@@ -262,21 +252,15 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td>
           <a href="http://goo.gl/FPYhKm">Bunny 10</a> by 5pm<br>
           <a href="http://goo.gl/gYtoVf">Homework 3, Part 1</a> due<br>
+          <a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 11/25.
       </td>
     </tr> 
     <tr>
-      <td>Th 4/17</td>
+      <td>TBD</td>
       <td></td>
       <td></td>
       <td></td>
-      <td>Midterm - 6.00 to 7.30 pm</td>
-    </tr> 
-    <tr>
-      <td>F 4/18</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 4/25.</td>
+      <td>Midterm - 5.00 to 6.30 pm</td>
     </tr> 
     <tr>
       <td>M 11/24</td>
@@ -293,7 +277,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       </td>
     </tr>
     <tr>
-      <td>F 4/25</td>
+      <td>Tu 11/25</td>
       <td></td>
       <td></td>
       <td></td>
