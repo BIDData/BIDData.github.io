@@ -74,7 +74,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfN24xejYyc1JCMkk/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab1">Lab 1</a>
+        <a href="https://github.com/biddata/datascience-fa14/tree/master/lab1">Lab 1</a>
       Unix
       </td>
       <td><a href="http://vis.stanford.edu/files/2012-EnterpriseAnalysisInterviews-VAST.pdf">Enterprise Data Analysis and Visualization: An Interview Study</a></td>
@@ -90,7 +90,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfR1BPeFlETndrLXc/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-        <a href="https://github.com/amplab/datascience-sp14/tree/master/lab2">Lab 2</a>
+        <a href="https://github.com/biddata/datascience-fa14/tree/master/lab2">Lab 2</a>
       Pandas 
       </td>
       <td><a href="http://www.eecs.berkeley.edu/~franklin/Papers/dataspaceSR.pdf">From Databases to Dataspaces: A New Abstraction for Information Management</a>
@@ -123,7 +123,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <a href="https://drive.google.com/a/berkeley.edu/file/d/0B5q5EyRrPiIfcENuLWE2UTlPMEk/edit?usp=sharing">[PDF]</a>
       </td>
       <td>
-              <a href="https://github.com/amplab/datascience-sp14/tree/master/lab3">Lab 3</a>
+              <a href="https://github.com/biddata/datascience-fa14/tree/master/lab3">Lab 3</a>
       OpenRefine
       </td>
       <td>
@@ -145,7 +145,7 @@ Plese set up your machine according to [these instuctions](setup.html).
        <a href="http://goo.gl/p6SGyA">[PDF]</a>
        </td>
        <td>
-       <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab4/joins.ipynb">Lab 4</a>
+       <a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/lab4/joins.ipynb">Lab 4</a>
        Pandas
        </td>
       <td><a href="http://yz.mit.edu/papers/webtables-vldb08.pdf">WebTables: Exploring the Power of Tables on the Web (Sections 1,2 and 4; others optional)</a>
@@ -165,7 +165,7 @@ Plese set up your machine according to [these instuctions](setup.html).
        <a href="http://goo.gl/rikI8i">[PDF]</a>
       </td>
       <td>
-    <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab5/lab5.ipynb">Lab 5</a>
+    <a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/lab5/lab5.ipynb">Lab 5</a>
       Python 
       </td>
       <td><a href="http://proquest.safaribooksonline.com/9781449363871/_statistical_thinking_in_the_age_of_big_data_html">Statistical Thinking in the Age of Big Data</a>
@@ -192,7 +192,7 @@ Plese set up your machine according to [these instuctions](setup.html).
         <a href="http://goo.gl/Hh6CwR">Homework Tips</a>
       </td>
       <td>
-                <a href="https://github.com/amplab/datascience-sp14/tree/master/lab6">Lab 6</a>
+                <a href="https://github.com/biddata/datascience-fa14/tree/master/lab6">Lab 6</a>
       R
       </td>
       <td><a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/3dot-algorithms/_three_basic_algorithms_html"> Three Basic Algorithms</a>
@@ -252,7 +252,7 @@ Plese set up your machine according to [these instuctions](setup.html).
           L10: Visualization (D3 lab)<a href="http://goo.gl/LWNBKw">[PPTX]</a> <a href="http://goo.gl/RKEsCP">[PDF]</a><br>
           
       </td>
-      <td>           <a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/lab9/lab9.ipynb">Lab 9</a> Visualization <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
+      <td>           <a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/lab9/lab9.ipynb">Lab 9</a> Visualization <a href="https://speakerdeck.com/alignedleft/learning-d3">Lab Slides</a>
       </td>
       <td>
         <a href="http://proquest.safaribooksonline.com/book/databases/9781449363871/9dot-data-visualization-and-fraud-detection/ch09_html">Chapter 9 on Data Visualization</a> from "Doing Data Science" available online or from the library.<br>
@@ -276,7 +276,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 4/25.</td>
+      <td><a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> out.  Due by 4/25.</td>
     </tr> 
     <tr>
       <td>M 11/24</td>
@@ -297,7 +297,7 @@ Plese set up your machine according to [these instuctions](setup.html).
       <td></td>
       <td></td>
       <td></td>
-      <td><a href="http://nbviewer.ipython.org/github/amplab/datascience-sp14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> due</td>
+      <td><a href="http://nbviewer.ipython.org/github/biddata/datascience-fa14/blob/master/hw3/hw3-part2.ipynb">Homework 3, Part 2</a> due</td>
     </tr> 
     <tr>
       <td>M 12/1</td>
