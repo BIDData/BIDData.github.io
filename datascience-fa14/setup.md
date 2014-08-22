@@ -39,7 +39,7 @@ We believe that machines that cannot support a 64-bit VM are *extremely* rare, s
 
 ### Software installed in the VM
 
-The virtual machine image we supplied is setup using [this script](https://github.com/woggle/datascience-vm-scripts/blob/master/post-build-script.sh), which should also work on a Ubuntu-like system (but this is not supported by the course staff). The notable pieces of software this installs are:
+The virtual machine image we supplied is setup using [this script](https://github.com/woggle/datascience-vm-scripts/blob/master/post-build-script.sh), which should also work on a Ubuntu-like system (but this is not supported by the course staff, so use it _at your own risk_). The notable pieces of software this installs are:
 
 *   [ipython](http://ipython.org/)
 *   [pandas](http://pandas.pydata.org/)
