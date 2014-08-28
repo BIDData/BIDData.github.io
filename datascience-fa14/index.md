@@ -19,7 +19,7 @@ manipulate data sets with code.
 * Instructor: [John Canny](http://cs.berkeley.edu/~jfc)
 * Time: MW 5pm - 6:30pm
 * Location: 145 Moffit
-* Teaching Assistants: [Charles Reiss](https://www.eecs.berkeley.edu/~charles) [Biye Jiang](https://www.eecs.berkeley.edu/~bjiang)
+* Teaching Assistants: [Charles Reiss](https://www.eecs.berkeley.edu/~charles) [Biye Jiang](https://www.cs.berkeley.edu/~bjiang)
 * Discussion: Join [Piazza](https://piazza.com/class/) for
   announcements and to ask questions about the course
 * Office hours:
