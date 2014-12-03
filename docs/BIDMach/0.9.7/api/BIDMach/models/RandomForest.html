@@ -1,0 +1,2036 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>RandomForest - BIDMach.models.RandomForest</title>
+          <meta name="description" content="RandomForest - BIDMach.models.RandomForest" />
+          <meta name="keywords" content="RandomForest BIDMach.models.RandomForest" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'BIDMach.models.RandomForest';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="RandomForest$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../package.html" class="extype" name="BIDMach">BIDMach</a>.<a href="package.html" class="extype" name="BIDMach.models">models</a></p>
+        <h1><a href="RandomForest$.html" title="Go to companion">RandomForest</a></h1> <span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RandomForest</span><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="BIDMach.models.RandomForest"><span>RandomForest</span></li><li class="in" name="BIDMach.models.Model"><span>Model</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="BIDMach.models.RandomForest#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(opts:BIDMach.models.RandomForest.Opts):BIDMach.models.RandomForest"></a>
+      <a id="&lt;init&gt;:RandomForest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">RandomForest</span><span class="params">(<span name="opts">opts: <a href="RandomForest$$Opts.html" class="extype" name="BIDMach.models.RandomForest.Opts">Opts</a> = <span class="symbol"><span class="name"><a href="RandomForest$.html">new RandomForest.Options</a></span></span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@&lt;init&gt;(opts:BIDMach.models.RandomForest.Opts):BIDMach.models.RandomForest" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="BIDMach.models.RandomForest.imptyType" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="imptyTypeextendsAnyRef"></a>
+      <a id="imptyType:imptyType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomForest$imptyType.html"><span class="name">imptyType</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@imptyTypeextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#ICat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ICat:Int"></a>
+      <a id="ICat:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ICat</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ICat:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#IFeat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IFeat:Int"></a>
+      <a id="IFeat:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IFeat</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@IFeat:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#INode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="INode:Int"></a>
+      <a id="INode:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">INode</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@INode:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#ITree" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ITree:Int"></a>
+      <a id="ITree:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ITree</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ITree:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#IVFeat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IVFeat:Int"></a>
+      <a id="IVFeat:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">IVFeat</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@IVFeat:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#JFeat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="JFeat:Int"></a>
+      <a id="JFeat:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">JFeat</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@JFeat:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#addV" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="addV(ind1:BIDMat.LMat,counts1:BIDMat.IMat,ind2:BIDMat.LMat,counts2:BIDMat.IMat):(BIDMat.LMat,BIDMat.IMat)"></a>
+      <a id="addV(LMat,IMat,LMat,IMat):(LMat,IMat)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addV</span><span class="params">(<span name="ind1">ind1: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="counts1">counts1: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ind2">ind2: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="counts2">counts2: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: (<span class="extype" name="BIDMat.LMat">LMat</span>, <span class="extype" name="BIDMat.IMat">IMat</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@addV(ind1:BIDMat.LMat,counts1:BIDMat.IMat,ind2:BIDMat.LMat,counts2:BIDMat.IMat):(BIDMat.LMat,BIDMat.IMat)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#batchSize" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="batchSize:Int"></a>
+      <a id="batchSize:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">batchSize</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@batchSize:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#bind" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bind(ds:BIDMach.datasources.DataSource):Unit"></a>
+      <a id="bind(DataSource):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bind</span><span class="params">(<span name="ds">ds: <a href="../datasources/DataSource.html" class="extype" name="BIDMach.datasources.DataSource">DataSource</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@bind(ds:BIDMach.datasources.DataSource):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMach.models.Model#copyMats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyMats(from:Array[BIDMat.Mat],to:Array[BIDMat.Mat]):Unit"></a>
+      <a id="copyMats(Array[Mat],Array[Mat]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyMats</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="to">to: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@copyMats(from:Array[BIDMat.Mat],to:Array[BIDMat.Mat]):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#copyTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyTo(mod:BIDMach.models.Model):Unit"></a>
+      <a id="copyTo(Model):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyTo</span><span class="params">(<span name="mod">mod: <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@copyTo(mod:BIDMach.models.Model):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#copycounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="copycounts(cnts:BIDMat.IMat,tmpc:BIDMat.IMat):BIDMat.IMat"></a>
+      <a id="copycounts(IMat,IMat):IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copycounts</span><span class="params">(<span name="cnts">cnts: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="tmpc">tmpc: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@copycounts(cnts:BIDMat.IMat,tmpc:BIDMat.IMat):BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#copyinds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="copyinds(inds:BIDMat.LMat,tmp:BIDMat.LMat):BIDMat.LMat"></a>
+      <a id="copyinds(LMat,LMat):LMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyinds</span><span class="params">(<span name="inds">inds: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="tmp">tmp: <span class="extype" name="BIDMat.LMat">LMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.LMat">LMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@copyinds(inds:BIDMat.LMat,tmp:BIDMat.LMat):BIDMat.LMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#countV" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="countV(ind1:BIDMat.LMat,counts1:BIDMat.IMat,ind2:BIDMat.LMat,counts2:BIDMat.IMat):Int"></a>
+      <a id="countV(LMat,IMat,LMat,IMat):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countV</span><span class="params">(<span name="ind1">ind1: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="counts1">counts1: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ind2">ind2: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="counts2">counts2: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@countV(ind1:BIDMat.LMat,counts1:BIDMat.IMat,ind2:BIDMat.LMat,counts2:BIDMat.IMat):Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#countbits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="countbits(n:Int):Int"></a>
+      <a id="countbits(Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">countbits</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@countbits(n:Int):Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#ctrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ctrees:BIDMat.IMat"></a>
+      <a id="ctrees:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ctrees</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ctrees:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#datasource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasource:BIDMach.datasources.DataSource"></a>
+      <a id="datasource:DataSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">datasource</span><span class="result">: <a href="../datasources/DataSource.html" class="extype" name="BIDMach.datasources.DataSource">DataSource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@datasource:BIDMach.datasources.DataSource" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#doblock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doblock(gmats:Array[BIDMat.Mat],ipass:Int,i:Long):Unit"></a>
+      <a id="doblock(Array[Mat],Int,Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doblock</span><span class="params">(<span name="gmats">gmats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="i">i: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@doblock(gmats:Array[BIDMat.Mat],ipass:Int,i:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.RandomForest">RandomForest</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#doblockg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):Unit"></a>
+      <a id="doblockg(Array[Mat],Int,Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doblockg</span><span class="params">(<span name="amats">amats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@doblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest.entImpurity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="entImpurity"></a>
+      <a id="entImpurity:entImpurity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomForest$entImpurity$.html"><span class="name">entImpurity</span></a><span class="result"> extends <a href="RandomForest$imptyType.html" class="extype" name="BIDMach.models.RandomForest.imptyType">imptyType</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@entImpurity" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#evalblock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="evalblock(mats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat"></a>
+      <a id="evalblock(Array[Mat],Int,Long):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evalblock</span><span class="params">(<span name="mats">mats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@evalblock(mats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.RandomForest">RandomForest</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#evalblockg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="evalblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat"></a>
+      <a id="evalblockg(Array[Mat],Int,Long):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evalblockg</span><span class="params">(<span name="amats">amats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@evalblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#extractAbove" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="extractAbove(fieldNum:Int,packedFields:Long):Int"></a>
+      <a id="extractAbove(Int,Long):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">extractAbove</span><span class="params">(<span name="fieldNum">fieldNum: <span class="extype" name="scala.Int">Int</span></span>, <span name="packedFields">packedFields: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@extractAbove(fieldNum:Int,packedFields:Long):Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#extractField" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="extractField(fieldNum:Int,packedFields:Long):Int"></a>
+      <a id="extractField(Int,Long):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">extractField</span><span class="params">(<span name="fieldNum">fieldNum: <span class="extype" name="scala.Int">Int</span></span>, <span name="packedFields">packedFields: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@extractField(fieldNum:Int,packedFields:Long):Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#fieldlengths" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fieldlengths:BIDMat.IMat"></a>
+      <a id="fieldlengths:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fieldlengths</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@fieldlengths:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#fieldmasks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fieldmasks:BIDMat.IMat"></a>
+      <a id="fieldmasks:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fieldmasks</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@fieldmasks:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#fieldshifts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="fieldshifts:BIDMat.IMat"></a>
+      <a id="fieldshifts:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fieldshifts</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@fieldshifts:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#findBoundaries" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="findBoundaries(keys:BIDMat.LMat,jc:BIDMat.IMat):(BIDMat.IMat,BIDMat.IMat)"></a>
+      <a id="findBoundaries(LMat,IMat):(IMat,IMat)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">findBoundaries</span><span class="params">(<span name="keys">keys: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="jc">jc: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: (<span class="extype" name="BIDMat.IMat">IMat</span>, <span class="extype" name="BIDMat.IMat">IMat</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@findBoundaries(keys:BIDMat.LMat,jc:BIDMat.IMat):(BIDMat.IMat,BIDMat.IMat)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#ftrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ftrees:BIDMat.IMat"></a>
+      <a id="ftrees:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ftrees</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ftrees:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#gains" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gains:BIDMat.FMat"></a>
+      <a id="gains:FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gains</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gains:BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#getFieldMasks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getFieldMasks(fL:BIDMat.IMat):BIDMat.IMat"></a>
+      <a id="getFieldMasks(IMat):IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFieldMasks</span><span class="params">(<span name="fL">fL: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@getFieldMasks(fL:BIDMat.IMat):BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#getFieldShifts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getFieldShifts(fL:BIDMat.IMat):BIDMat.IMat"></a>
+      <a id="getFieldShifts(IMat):IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getFieldShifts</span><span class="params">(<span name="fL">fL: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@getFieldShifts(fL:BIDMat.IMat):BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#gfieldlengths" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gfieldlengths:BIDMat.GIMat"></a>
+      <a id="gfieldlengths:GIMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gfieldlengths</span><span class="result">: <span class="extype" name="BIDMat.GIMat">GIMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gfieldlengths:BIDMat.GIMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest.giniImpurity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="giniImpurity"></a>
+      <a id="giniImpurity:giniImpurity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomForest$giniImpurity$.html"><span class="name">giniImpurity</span></a><span class="result"> extends <a href="RandomForest$imptyType.html" class="extype" name="BIDMach.models.RandomForest.imptyType">imptyType</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@giniImpurity" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#gmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gmats:Array[BIDMat.Mat]"></a>
+      <a id="gmats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gmats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gmats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#gout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gout:BIDMat.GIMat"></a>
+      <a id="gout:GIMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gout</span><span class="result">: <span class="extype" name="BIDMat.GIMat">GIMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gout:BIDMat.GIMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#gtnodes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gtnodes:BIDMat.GIMat"></a>
+      <a id="gtnodes:GIMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gtnodes</span><span class="result">: <span class="extype" name="BIDMat.GIMat">GIMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gtnodes:BIDMat.GIMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#gtreePack" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gtreePack(fdata:BIDMat.FMat,tnodes:BIDMat.IMat,icats:BIDMat.IMat,out:BIDMat.LMat):BIDMat.LMat"></a>
+      <a id="gtreePack(FMat,IMat,IMat,LMat):LMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gtreePack</span><span class="params">(<span name="fdata">fdata: <span class="extype" name="BIDMat.FMat">FMat</span></span>, <span name="tnodes">tnodes: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="icats">icats: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="out">out: <span class="extype" name="BIDMat.LMat">LMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.LMat">LMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gtreePack(fdata:BIDMat.FMat,tnodes:BIDMat.IMat,icats:BIDMat.IMat,out:BIDMat.LMat):BIDMat.LMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#gtrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gtrees:BIDMat.GIMat"></a>
+      <a id="gtrees:GIMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gtrees</span><span class="result">: <span class="extype" name="BIDMat.GIMat">GIMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@gtrees:BIDMat.GIMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#igains" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="igains:BIDMat.FMat"></a>
+      <a id="igains:FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">igains</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@igains:BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#imptyFunArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="imptyFunArray:Array[RandomForest.this.imptyType]"></a>
+      <a id="imptyFunArray:Array[imptyType]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">imptyFunArray</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="RandomForest$imptyType.html" class="extype" name="BIDMach.models.RandomForest.imptyType">imptyType</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@imptyFunArray:Array[RandomForest.this.imptyType]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init():Unit"></a>
+      <a id="init():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@init():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.RandomForest">RandomForest</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#itrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="itrees:BIDMat.IMat"></a>
+      <a id="itrees:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">itrees</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@itrees:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#jc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="jc:BIDMat.IMat"></a>
+      <a id="jc:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">jc</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@jc:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#makeV" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="makeV(ind:BIDMat.LMat,counts:BIDMat.IMat):(BIDMat.LMat,BIDMat.IMat)"></a>
+      <a id="makeV(LMat,IMat):(LMat,IMat)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">makeV</span><span class="params">(<span name="ind">ind: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="counts">counts: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: (<span class="extype" name="BIDMat.LMat">LMat</span>, <span class="extype" name="BIDMat.IMat">IMat</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@makeV(ind:BIDMat.LMat,counts:BIDMat.IMat):(BIDMat.LMat,BIDMat.IMat)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#mats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mats:Array[BIDMat.Mat]"></a>
+      <a id="mats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@mats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#minImpurity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="minImpurity(keys:BIDMat.LMat,cnts:BIDMat.IMat,outv:BIDMat.IMat,outf:BIDMat.IMat,outn:BIDMat.IMat,outg:BIDMat.FMat,outc:BIDMat.IMat,outlr:BIDMat.IMat,jc:BIDMat.IMat,jtree:BIDMat.IMat,itree:Int,fnum:Int):BIDMat.FMat"></a>
+      <a id="minImpurity(LMat,IMat,IMat,IMat,IMat,FMat,IMat,IMat,IMat,IMat,Int,Int):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minImpurity</span><span class="params">(<span name="keys">keys: <span class="extype" name="BIDMat.LMat">LMat</span></span>, <span name="cnts">cnts: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="outv">outv: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="outf">outf: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="outn">outn: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="outg">outg: <span class="extype" name="BIDMat.FMat">FMat</span></span>, <span name="outc">outc: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="outlr">outlr: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="jc">jc: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="jtree">jtree: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="itree">itree: <span class="extype" name="scala.Int">Int</span></span>, <span name="fnum">fnum: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@minImpurity(keys:BIDMat.LMat,cnts:BIDMat.IMat,outv:BIDMat.IMat,outf:BIDMat.IMat,outn:BIDMat.IMat,outg:BIDMat.FMat,outc:BIDMat.IMat,outlr:BIDMat.IMat,jc:BIDMat.IMat,jtree:BIDMat.IMat,itree:Int,fnum:Int):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#modelmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modelmats:Array[BIDMat.Mat]"></a>
+      <a id="modelmats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modelmats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@modelmats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#ncats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ncats:Int"></a>
+      <a id="ncats:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ncats</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ncats:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#nfeats" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nfeats:Int"></a>
+      <a id="nfeats:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nfeats</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@nfeats:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#nnodes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nnodes:Int"></a>
+      <a id="nnodes:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nnodes</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@nnodes:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#nodecounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nodecounts:BIDMat.IMat"></a>
+      <a id="nodecounts:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nodecounts</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@nodecounts:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#nsamps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nsamps:Int"></a>
+      <a id="nsamps:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nsamps</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@nsamps:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#ntrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ntrees:Int"></a>
+      <a id="ntrees:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ntrees</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ntrees:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#nvals" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nvals:Int"></a>
+      <a id="nvals:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nvals</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@nvals:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#opts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opts:BIDMach.models.RandomForest.Opts"></a>
+      <a id="opts:Opts"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opts</span><span class="result">: <a href="RandomForest$$Opts.html" class="extype" name="BIDMach.models.RandomForest.Opts">Opts</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@opts:BIDMach.models.RandomForest.Opts" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.RandomForest">RandomForest</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#outc" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outc:BIDMat.IMat"></a>
+      <a id="outc:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outc</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outc:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#outf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outf:BIDMat.IMat"></a>
+      <a id="outf:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outf</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outf:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#outg" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outg:BIDMat.FMat"></a>
+      <a id="outg:FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outg</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outg:BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#outlr" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outlr:BIDMat.IMat"></a>
+      <a id="outlr:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outlr</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outlr:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#outn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outn:BIDMat.IMat"></a>
+      <a id="outn:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outn</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outn:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#outv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outv:BIDMat.IMat"></a>
+      <a id="outv:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outv</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@outv:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#packFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="packFields(itree:Int,inode:Int,jfeat:Int,ifeat:Int,ivfeat:Int,icat:Int):Long"></a>
+      <a id="packFields(Int,Int,Int,Int,Int,Int):Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">packFields</span><span class="params">(<span name="itree">itree: <span class="extype" name="scala.Int">Int</span></span>, <span name="inode">inode: <span class="extype" name="scala.Int">Int</span></span>, <span name="jfeat">jfeat: <span class="extype" name="scala.Int">Int</span></span>, <span name="ifeat">ifeat: <span class="extype" name="scala.Int">Int</span></span>, <span name="ivfeat">ivfeat: <span class="extype" name="scala.Int">Int</span></span>, <span name="icat">icat: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@packFields(itree:Int,inode:Int,jfeat:Int,ifeat:Int,ivfeat:Int,icat:Int):Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#putBack" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="putBack:Int"></a>
+      <a id="putBack:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">putBack</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@putBack:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#refresh" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="refresh:Boolean"></a>
+      <a id="refresh:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">refresh</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@refresh:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#rhash" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rhash(v1:Int,v2:Int,v3:Int,nb:Int):Int"></a>
+      <a id="rhash(Int,Int,Int,Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rhash</span><span class="params">(<span name="v1">v1: <span class="extype" name="scala.Int">Int</span></span>, <span name="v2">v2: <span class="extype" name="scala.Int">Int</span></span>, <span name="v3">v3: <span class="extype" name="scala.Int">Int</span></span>, <span name="nb">nb: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@rhash(v1:Int,v2:Int,v3:Int,nb:Int):Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#runtimes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="runtimes:BIDMat.FMat"></a>
+      <a id="runtimes:FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runtimes</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@runtimes:BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#t0" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t0:Float"></a>
+      <a id="t0:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t0</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t0:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#t1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t1:Float"></a>
+      <a id="t1:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t1</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t1:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#t2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t2:Float"></a>
+      <a id="t2:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t2</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t2:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#t3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t3:Float"></a>
+      <a id="t3:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t3</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t3:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#t4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t4:Float"></a>
+      <a id="t4:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t4</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t4:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#t5" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="t5:Float"></a>
+      <a id="t5:Float"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t5</span><span class="result">: <span class="extype" name="scala.Float">Float</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@t5:Float" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#tally" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tally(nodes:BIDMat.IMat):BIDMat.IMat"></a>
+      <a id="tally(IMat):IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tally</span><span class="params">(<span name="nodes">nodes: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@tally(nodes:BIDMat.IMat):BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#tmpcounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tmpcounts:BIDMat.IMat"></a>
+      <a id="tmpcounts:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tmpcounts</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@tmpcounts:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#tmpinds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tmpinds:BIDMat.LMat"></a>
+      <a id="tmpinds:LMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tmpinds</span><span class="result">: <span class="extype" name="BIDMat.LMat">LMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@tmpinds:BIDMat.LMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#tochildren" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tochildren(itree:Int,inodes:BIDMat.IMat,icats:BIDMat.IMat):Unit"></a>
+      <a id="tochildren(Int,IMat,IMat):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tochildren</span><span class="params">(<span name="itree">itree: <span class="extype" name="scala.Int">Int</span></span>, <span name="inodes">inodes: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="icats">icats: <span class="extype" name="BIDMat.IMat">IMat</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@tochildren(itree:Int,inodes:BIDMat.IMat,icats:BIDMat.IMat):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#totalcounts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="totalcounts:BIDMat.IMat"></a>
+      <a id="totalcounts:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalcounts</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@totalcounts:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#totalinds" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="totalinds:BIDMat.LMat"></a>
+      <a id="totalinds:LMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totalinds</span><span class="result">: <span class="extype" name="BIDMat.LMat">LMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@totalinds:BIDMat.LMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#treePack" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="treePack(fdata:BIDMat.FMat,treenodes:BIDMat.IMat,cats:BIDMat.IMat,out:BIDMat.LMat):BIDMat.LMat"></a>
+      <a id="treePack(FMat,IMat,IMat,LMat):LMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">treePack</span><span class="params">(<span name="fdata">fdata: <span class="extype" name="BIDMat.FMat">FMat</span></span>, <span name="treenodes">treenodes: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="cats">cats: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="out">out: <span class="extype" name="BIDMat.LMat">LMat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.LMat">LMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@treePack(fdata:BIDMat.FMat,treenodes:BIDMat.IMat,cats:BIDMat.IMat,out:BIDMat.LMat):BIDMat.LMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#treeStep" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="treeStep(idata:BIDMat.FMat,tnodes:BIDMat.IMat,itrees:BIDMat.IMat,ftrees:BIDMat.IMat,vtrees:BIDMat.IMat,ctrees:BIDMat.IMat,getcat:Boolean):Unit"></a>
+      <a id="treeStep(FMat,IMat,IMat,IMat,IMat,IMat,Boolean):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">treeStep</span><span class="params">(<span name="idata">idata: <span class="extype" name="BIDMat.FMat">FMat</span></span>, <span name="tnodes">tnodes: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="itrees">itrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ftrees">ftrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="vtrees">vtrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ctrees">ctrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="getcat">getcat: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@treeStep(idata:BIDMat.FMat,tnodes:BIDMat.IMat,itrees:BIDMat.IMat,ftrees:BIDMat.IMat,vtrees:BIDMat.IMat,ctrees:BIDMat.IMat,getcat:Boolean):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#treeWalk" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="treeWalk(idata:BIDMat.FMat,itrees:BIDMat.IMat,ftrees:BIDMat.IMat,vtrees:BIDMat.IMat,ctrees:BIDMat.IMat,depth:Int,getcat:Boolean):BIDMat.IMat"></a>
+      <a id="treeWalk(FMat,IMat,IMat,IMat,IMat,Int,Boolean):IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">treeWalk</span><span class="params">(<span name="idata">idata: <span class="extype" name="BIDMat.FMat">FMat</span></span>, <span name="itrees">itrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ftrees">ftrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="vtrees">vtrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="ctrees">ctrees: <span class="extype" name="BIDMat.IMat">IMat</span></span>, <span name="depth">depth: <span class="extype" name="scala.Int">Int</span></span>, <span name="getcat">getcat: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@treeWalk(idata:BIDMat.FMat,itrees:BIDMat.IMat,ftrees:BIDMat.IMat,vtrees:BIDMat.IMat,ctrees:BIDMat.IMat,depth:Int,getcat:Boolean):BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#unpackFields" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="unpackFields(im:Long):(Int,Int,Int,Int,Int,Int)"></a>
+      <a id="unpackFields(Long):(Int,Int,Int,Int,Int,Int)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unpackFields</span><span class="params">(<span name="im">im: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: (<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@unpackFields(im:Long):(Int,Int,Int,Int,Int,Int)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#updatePass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatePass(ipass:Int):Unit"></a>
+      <a id="updatePass(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updatePass</span><span class="params">(<span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@updatePass(ipass:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.RandomForest">RandomForest</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#updatemats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatemats:Array[BIDMat.Mat]"></a>
+      <a id="updatemats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updatemats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@updatemats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#useGPU" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="useGPU:Boolean"></a>
+      <a id="useGPU:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useGPU</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@useGPU:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#vtrees" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vtrees:BIDMat.IMat"></a>
+      <a id="vtrees:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vtrees</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@vtrees:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMach.models.RandomForest#xnodes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="xnodes:BIDMat.IMat"></a>
+      <a id="xnodes:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xnodes</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@xnodes:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest#ynodes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ynodes:BIDMat.IMat"></a>
+      <a id="ynodes:IMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ynodes</span><span class="result">: <span class="extype" name="BIDMat.IMat">IMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.RandomForest@ynodes:BIDMat.IMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="BIDMach.models.Model">
+              <h3>Inherited from <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
