@@ -47,8 +47,10 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Basic DNN class.
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Basic DNN class. Learns a supervised map from input blocks to output (target) data blocks. There are currently 4 layer types:</p><ul><li>InputLayer: just a placeholder for the first layer which is loaded with input data blocks. No learnable params.</li><li>FCLayer: Fully-Connected Linear layer. Has a matrix of learnable params which is the input-output map.</li><li>RectLayer: Rectifying one-to-one layer. No params.</li><li>GLMLayer: a one-to-one layer with GLM mappings (linear, logistic, abs-logistic and SVM). No learnable params.</li></ul><p>The network topology is specified by opts.layers which is a sequence of &quot;LayerSpec&quot; objects. There is a LayerSpec
+Class for each Layer class, which holds the params for defining that layer. Currently only two LayerSpec types need params:</p><ul><li>FC: holds the output dimensions of the FClayer (input dimension set by previous layer).</li><li>GLM: holds the links matrix (integer specs for loss types, see GLM), for the output of that layer. Its size should match the
+number of targets.
+</li></ul></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>

@@ -56,8 +56,8 @@ opts.dim=<span class="num">200</span>          <span class="cmt">// customize op
 nn.train              <span class="cmt">// train the learner</span>
 nn.modelmat           <span class="cmt">// get the final model</span>
 
-<span class="kw">val</span> (nn, opts) = KMeans.learnPar(a,w) <span class="cmt">// Build a parallel learner</span>
-<span class="kw">val</span> (nn, opts) = KMeans.learnPar(a)
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a,w) <span class="cmt">// Build a parallel learner</span>
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a)
 opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
 nn.train              <span class="cmt">// train the learner</span>
 nn.modelmat           <span class="cmt">// get the final model</span></pre></div><div class="toggleContainer block">

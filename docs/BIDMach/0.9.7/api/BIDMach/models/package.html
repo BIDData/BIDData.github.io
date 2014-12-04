@@ -101,7 +101,7 @@
       </a>
     </span>
       
-    </li><li name="BIDMach.models.DNN" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="BIDMach.models.DNN" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DNNextendsModel"></a>
       <a id="DNN:DNN"></a>
       <h4 class="signature">
@@ -117,7 +117,10 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Basic DNN class.</p>
+      <p class="shortcomment cmt">Basic DNN class.</p><div class="fullcomment"><div class="comment cmt"><p>Basic DNN class. Learns a supervised map from input blocks to output (target) data blocks. There are currently 4 layer types:</p><ul><li>InputLayer: just a placeholder for the first layer which is loaded with input data blocks. No learnable params.</li><li>FCLayer: Fully-Connected Linear layer. Has a matrix of learnable params which is the input-output map.</li><li>RectLayer: Rectifying one-to-one layer. No params.</li><li>GLMLayer: a one-to-one layer with GLM mappings (linear, logistic, abs-logistic and SVM). No learnable params.</li></ul><p>The network topology is specified by opts.layers which is a sequence of &quot;LayerSpec&quot; objects. There is a LayerSpec
+Class for each Layer class, which holds the params for defining that layer. Currently only two LayerSpec types need params:</p><ul><li>FC: holds the output dimensions of the FClayer (input dimension set by previous layer).</li><li>GLM: holds the links matrix (integer specs for loss types, see GLM), for the output of that layer. Its size should match the
+number of targets.
+</li></ul></div></div>
     </li><li name="BIDMach.models.FM" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FMextendsRegressionModel"></a>
       <a id="FM:FM"></a>
@@ -188,30 +191,20 @@ number of factors) of the matrix of second-order interactions.</p><p>The types o
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Train a GLM model.</p><div class="fullcomment"><div class="comment cmt"><p>Train a GLM model. The types of model are given by the values of opts.links (IMat). They are:
-* 0 = linear model (squared loss)
-* 1 = logistic model (logistic loss)
-* 2 = hinge logistic (hinge loss on logistic prediction)
-* 3 = SVM model (hinge loss)</p><p>Options are:
-  links: an IMat whose nrows should equal the number of targets. Values as above. Can be different for different targets.
-  iweight: an FMat typically used to select a weight row from the input. i.e. iweight = 0,1,0,0,0 uses the second
-           row of input data as weights to be applied to input samples. The iweight field should be 0 in mask.</p><p>Inherited from Regression Model:
-  rmask: FMat, optional, 0-1-valued. Used to ignore certain input rows (which are targets or weights).
-         Zero value in an element will ignore the corresponding row.
-  targets: FMat, optional, 0-1-valued. ntargs x nfeats. Used to specify which input features corresponding to targets.
-  targmap: FMat, optional, 0-1-valued. nntargs x ntargs. Used to replicate actual targets, e.g. to train multiple models
-           (usually with different parameters) for the same target.</p><p>Some convenience functions for training:
-val (mm, opts) = GLM.learner(a, d)    // On an input matrix a including targets (set opts.targets to specify them),
-                                      // learns a GLM model of type d.
-                                      // returns the model (nn) and the options class (opts).
-val (mm, opts) = GLM.learner(a, c, d) // On an input matrix a and target matrix c, learns a GLM model of type d.
-                                      // returns the model (nn) and the options class (opts).
-val (nn, nopts) = predictor(model, ta, pc, d) // constructs a prediction learner from an existing model. returns the learner and options.
-                                      // pc should be the same dims as the test label matrix, and will contain results after nn.predict
-val (mm, mopts, nn, nopts) = GLM.learner(a, c, ta, pc, d) // a = training data, c = training labels, ta = test data, pc = prediction matrix, d = type.
-                                      // returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.
-                                      // typically set options, then do mm.train; nn.predict with results in pc.
-val (mm, opts) = learner(ds)          // Build a learner for a general datasource ds (e.g. a files data source).</p></div></div>
+      <p class="shortcomment cmt">Train a GLM model.</p><div class="fullcomment"><div class="comment cmt"><p>Train a GLM model. The types of model are given by the values of opts.links (IMat). They are:</p><ul><li>0 = linear model (squared loss)</li><li>1 = logistic model (logistic loss)</li><li>2 = hinge logistic (hinge loss on logistic prediction)</li><li>3 = SVM model (hinge loss)</li></ul><p>Options are:</p><ul><li>  links: an IMat whose nrows should equal the number of targets. Values as above. Can be different for different targets.</li><li>  iweight: an FMat typically used to select a weight row from the input. i.e. iweight = 0,1,0,0,0 uses the second
+           row of input data as weights to be applied to input samples. The iweight field should be 0 in mask.</li></ul><p>Inherited from Regression Model:</p><ul><li>  rmask: FMat, optional, 0-1-valued. Used to ignore certain input rows (which are targets or weights).
+         Zero value in an element will ignore the corresponding row.</li><li>  targets: FMat, optional, 0-1-valued. ntargs x nfeats. Used to specify which input features corresponding to targets.</li><li>  targmap: FMat, optional, 0-1-valued. nntargs x ntargs. Used to replicate actual targets, e.g. to train multiple models
+           (usually with different parameters) for the same target.</li></ul><p>Some convenience functions for training:</p><pre><span class="kw">val</span> (mm, opts) = GLM.learner(a, d)    <span class="cmt">// On an input matrix a including targets (set opts.targets to specify them),</span>
+                                      <span class="cmt">// learns a GLM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (mm, opts) = GLM.learner(a, c, d) <span class="cmt">// On an input matrix a and target matrix c, learns a GLM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (nn, nopts) = predictor(model, ta, pc, d) <span class="cmt">// constructs a prediction learner from an existing model. returns the learner and options.</span>
+                                      <span class="cmt">// pc should be the same dims as the test label matrix, and will contain results after nn.predict</span>
+<span class="kw">val</span> (mm, mopts, nn, nopts) = GLM.learner(a, c, ta, pc, d) <span class="cmt">// a = training data, c = training labels, ta = test data, pc = prediction matrix, d = type.</span>
+                                      <span class="cmt">// returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.</span>
+                                      <span class="cmt">// typically set options, then do mm.train; nn.predict with results in pc.</span>
+<span class="kw">val</span> (mm, opts) = learner(ds)          <span class="cmt">// Build a learner for a general datasource ds (e.g. a files data source).</span></pre></div></div>
     </li><li name="BIDMach.models.GLMlink" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="GLMlinkextendsAnyRef"></a>
       <a id="GLMlink:GLMlink"></a>
@@ -297,8 +290,8 @@ opts.dim=<span class="num">200</span>          <span class="cmt">// customize op
 nn.train              <span class="cmt">// train the learner</span>
 nn.modelmat           <span class="cmt">// get the final model</span>
 
-<span class="kw">val</span> (nn, opts) = KMeans.learnPar(a,w) <span class="cmt">// Build a parallel learner</span>
-<span class="kw">val</span> (nn, opts) = KMeans.learnPar(a)
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a,w) <span class="cmt">// Build a parallel learner</span>
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a)
 opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
 nn.train              <span class="cmt">// train the learner</span>
 nn.modelmat           <span class="cmt">// get the final model</span></pre></div></div>
