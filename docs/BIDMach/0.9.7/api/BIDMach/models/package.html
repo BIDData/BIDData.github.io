@@ -205,23 +205,6 @@ number of factors) of the matrix of second-order interactions.</p><p>The types o
                                       <span class="cmt">// returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.</span>
                                       <span class="cmt">// typically set options, then do mm.train; nn.predict with results in pc.</span>
 <span class="kw">val</span> (mm, opts) = learner(ds)          <span class="cmt">// Build a learner for a general datasource ds (e.g. a files data source).</span></pre></div></div>
-    </li><li name="BIDMach.models.GLMlink" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="GLMlinkextendsAnyRef"></a>
-      <a id="GLMlink:GLMlink"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a href="GLMlink.html"><span class="name">GLMlink</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@GLMlinkextendsAnyRef" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="BIDMach.models.Graph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="GraphextendsAnyRef"></a>
       <a id="Graph:Graph"></a>
@@ -677,74 +660,6 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
       </a>
     </span>
       
-    </li><li name="BIDMach.models.LinearLink" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LinearLink"></a>
-      <a id="LinearLink:LinearLink"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="LinearLink$.html"><span class="name">LinearLink</span></a><span class="result"> extends <a href="GLMlink.html" class="extype" name="BIDMach.models.GLMlink">GLMlink</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@LinearLink" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="BIDMach.models.LinkEnum" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LinkEnum"></a>
-      <a id="LinkEnum:LinkEnum"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="LinkEnum$.html"><span class="name">LinkEnum</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@LinkEnum" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="BIDMach.models.LogisticLink" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="LogisticLink"></a>
-      <a id="LogisticLink:LogisticLink"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="LogisticLink$.html"><span class="name">LogisticLink</span></a><span class="result"> extends <a href="GLMlink.html" class="extype" name="BIDMach.models.GLMlink">GLMlink</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@LogisticLink" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="BIDMach.models.MaxpLink" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MaxpLink"></a>
-      <a id="MaxpLink:MaxpLink"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="MaxpLink$.html"><span class="name">MaxpLink</span></a><span class="result"> extends <a href="GLMlink.html" class="extype" name="BIDMach.models.GLMlink">GLMlink</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@MaxpLink" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
     </li><li name="BIDMach.models.Model" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Model"></a>
       <a id="Model:Model"></a>
@@ -826,23 +741,6 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
       </span>
       </h4><span class="permalink">
       <a href="../../index.html#BIDMach.models.package@SFA" title="Permalink" target="_top">
-        <img src="../../lib/permalink.png" />
-      </a>
-    </span>
-      
-    </li><li name="BIDMach.models.SVMLink" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SVMLink"></a>
-      <a id="SVMLink:SVMLink"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="SVMLink$.html"><span class="name">SVMLink</span></a><span class="result"> extends <a href="GLMlink.html" class="extype" name="BIDMach.models.GLMlink">GLMlink</a></span>
-      </span>
-      </h4><span class="permalink">
-      <a href="../../index.html#BIDMach.models.package@SVMLink" title="Permalink" target="_top">
         <img src="../../lib/permalink.png" />
       </a>
     </span>
