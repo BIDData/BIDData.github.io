@@ -450,7 +450,7 @@ opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of th
 nn.train              <span class="cmt">// run the model</span>
 nn.modelmat           <span class="cmt">// get the final model</span>
 nn.datamat            <span class="cmt">// get the other factor</span></pre></div></div>
-    </li><li name="BIDMach.models.RandomForest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="BIDMach.models.RandomForest" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="RandomForestextendsModel"></a>
       <a id="RandomForest:RandomForest"></a>
       <h4 class="signature">
@@ -466,7 +466,20 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      
+      <p class="shortcomment cmt">Random Forests.</p><div class="fullcomment"><div class="comment cmt"><p>Random Forests. Given a datasource of data and labels, compute a random classification or regression Forest.</p><p> * <b>Options</b></p><ul><li>depth(20): Bound on the tree depth, also the number of passes over the dataset.</li><li>ntrees(20): Number of trees in the Forest.</li><li>nsamps(32): Number of random features to try to split each node.</li><li>nnodes(200000): Bound on the size of each tree (number of nodes).</li><li>nbits(16): Number of bits to use for feature values.</li><li>gain(0.01f): Lower bound on impurity gain in order to split a node.</li><li>catsPerSample(1f): Number of cats per sample for multilabel classification.</li><li>ncats(0): Number of cats or regression values. 0 means guess from datasource.</li><li>training(true): Run for training (true) or prediction (false)</li><li>impurity(0): Impurity type, 0=entropy, 1=Gini</li><li>regression(false): Build a regression Forest (true) or classification Forest (false).</li><li>seed(1): Random seed for selecting features. Use this to train distinct Forests in multiple runs.</li><li>useIfeats(false): An internal var, when true use explicit feature indices vs compute them.</li><li>MAE(true): true=Use Mean Absolute Error when reporting performance vs. false=Mean Squared Error</li><li>trace(0): level of debugging information to print (0,1,2).</li></ul><p>NOTE: The algorithm uses a packed representation of the dataset statistics with fixed precision fields.
+Setting nbits selects how many bits to use from each input data. For integer data, the lower nbits are used.
+For floating point data, the leading nbits are used. So e.g. 16 float bits gives sign, 8 bits of exponent,
+and 7 bits of mantissa with a leading 1.</p><p>For regression, discrete (integer) target values should be used in the training data. The output will be continuous
+values interpolated from them.</p><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize(10000): The number of samples processed in a block</li><li>putBack(-1): Whether to put predictions back into the datasource target. Should be 1 for prediction.</li><li>useGPU(true): Use GPU acceleration if available</li></ul><p><b>Example:</b></p><p>a is an nfeats x ninstances data matrix, c is a 1 x ninstances vector of labels</p><pre><span class="kw">val</span> (nn, opts) = RandomForest.learner(a,c)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.depth=<span class="num">25</span>         <span class="cmt">// Set depth - something like log2(ninstances / 10) is good</span>
+opts.ntrees=<span class="num">20</span>        <span class="cmt">// Good starting value. Increasing this usually increases accuracy.</span>
+opts.nsamps=<span class="num">30</span>        <span class="cmt">// Typically sqrt(nfeats) is good. Larger values may work better.</span>
+opts.nnodes           <span class="cmt">// Bounded by 2^depth, but usually smaller than this.</span>
+opts.ncats=<span class="num">10</span>         <span class="cmt">// Its a good idea to set this - learner will try to guess it, but may get it wrong</span>
+opts.nbits=<span class="num">10</span>         <span class="cmt">// Number of bits to use from input data.</span>
+nn.train              <span class="cmt">// train the learner.</span>
+nn.modelmats          <span class="cmt">// get the final model (4 matrices)</span></pre></div></div>
     </li><li name="BIDMach.models.RegressionModel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="RegressionModelextendsModel"></a>
       <a id="RegressionModel:RegressionModel"></a>
