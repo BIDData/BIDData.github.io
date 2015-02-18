@@ -1,0 +1,1324 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>FM - BIDMach.models.FM</title>
+          <meta name="description" content="FM - BIDMach.models.FM" />
+          <meta name="keywords" content="FM BIDMach.models.FM" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'BIDMach.models.FM';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="FM$.html" title="Go to companion"><img src="../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../package.html" class="extype" name="BIDMach">BIDMach</a>.<a href="package.html" class="extype" name="BIDMach.models">models</a></p>
+        <h1><a href="FM$.html" title="Go to companion">FM</a></h1> <span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FM</span><span class="result"> extends <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Factorization Machine Model.
+This class computes a factorization machine model a la</p><p>Steffen Rendle (2012): Factorization Machines with libFM, in ACM Trans. Intell. Syst. Technol., 3(3), May.</p><p>We depart slightly from the original FM formulation by including both positive definite and negative definite factors.
+While the positive definite factor can approximate any matrix in the limit, using both positive and negative definite factors
+should give better performance for a fixed number of factors. This is what we observed on several datasets.
+With both positive definite and negative definite factors, there should also be no need to remove diagonal terms, since
+the positive and negative factorizations already form a conventional eigendecomposition (a best least-squares fit for a given
+number of factors) of the matrix of second-order interactions.</p><p>The types of model are given by the values of opts.links (IMat) and are the same as for GLM models. They are:</p><ul><li>0 = linear model (squared loss)</li><li>1 = logistic model (logistic loss)</li><li>2 = absolute logistic (hinge loss on logistic prediction)</li><li>3 = SVM model (hinge loss)</li></ul><p>Options are:</p><ul><li>  links: an IMat whose nrows should equal the number of targets. Values as above. Can be different for different targets.</li><li>  iweight: an FMat typically used to select a weight row from the input. i.e. iweight = 0,1,0,0,0 uses the second
+           row of input data as weights to be applied to input samples. The iweight field should be 0 in mask.</li><li>  dim1: Dimension of the positive definite factor</li><li>  dim2: Dimension of the negative definite factor</li><li>  strictFM: the exact FM model zeros the diagonal terms of the factorization. As mentioned above, this probably isn't needed
+            in our version of the model, but its available.</li></ul><p>Inherited from Regression Model:</p><ul><li>  rmask: FMat, optional, 0-1-valued. Used to ignore certain input rows (which are targets or weights).
+         Zero value in an element will ignore the corresponding row.</li><li>  targets: FMat, optional, 0-1-valued. ntargs x nfeats. Used to specify which input features corresponding to targets.</li><li>  targmap: FMat, optional, 0-1-valued. nntargs x ntargs. Used to replicate actual targets, e.g. to train multiple models
+           (usually with different parameters) for the same target.</li></ul><p>Some convenience functions for training:</p><pre><span class="kw">val</span> (mm, opts) = FM.learner(a, d)     <span class="cmt">// On an input matrix a including targets (set opts.targets to specify them),</span>
+                                      <span class="cmt">// learns an FM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (mm, opts) = FM.learner(a, c, d)  <span class="cmt">// On an input matrix a and target matrix c, learns an FM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (nn, nopts) = FM.predictor(model, ta, pc, d) <span class="cmt">// constructs a prediction learner from an existing model. returns the learner and options.</span>
+                                      <span class="cmt">// pc should be the same dims as the test label matrix, and will contain results after nn.predict</span>
+<span class="kw">val</span> (mm, mopts, nn, nopts) = FM.learner(a, c, ta, pc, d) <span class="cmt">// a = training data, c = training labels, ta = test data, pc = prediction matrix, d = type.</span>
+                                      <span class="cmt">// returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.</span>
+                                      <span class="cmt">// typically set options, then do mm.train; nn.predict with results in pc.</span>
+<span class="kw">val</span> (mm, opts) = learner(ds)          <span class="cmt">// Build a learner for a general datasource ds (e.g. a files data source).</span></pre></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a>, <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="BIDMach.models.FM"><span>FM</span></li><li class="in" name="BIDMach.models.RegressionModel"><span>RegressionModel</span></li><li class="in" name="BIDMach.models.Model"><span>Model</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="BIDMach.models.FM#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(opts:BIDMach.models.FM.Opts):BIDMach.models.FM"></a>
+      <a id="&lt;init&gt;:FM"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FM</span><span class="params">(<span name="opts">opts: <a href="FM$$Opts.html" class="extype" name="BIDMach.models.FM.Opts">Opts</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@&lt;init&gt;(opts:BIDMach.models.FM.Opts):BIDMach.models.FM" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.Model#_modelmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_modelmats:Array[BIDMat.Mat]"></a>
+      <a id="_modelmats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">_modelmats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@_modelmats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMach.models.Model#bind" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bind(ds:BIDMach.datasources.DataSource):Unit"></a>
+      <a id="bind(DataSource):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bind</span><span class="params">(<span name="ds">ds: <a href="../datasources/DataSource.html" class="extype" name="BIDMach.datasources.DataSource">DataSource</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@bind(ds:BIDMach.datasources.DataSource):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMach.models.Model#copyMats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyMats(from:Array[BIDMat.Mat],to:Array[BIDMat.Mat]):Unit"></a>
+      <a id="copyMats(Array[Mat],Array[Mat]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyMats</span><span class="params">(<span name="from">from: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="to">to: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@copyMats(from:Array[BIDMat.Mat],to:Array[BIDMat.Mat]):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#copyTo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="copyTo(mod:BIDMach.models.Model):Unit"></a>
+      <a id="copyTo(Model):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">copyTo</span><span class="params">(<span name="mod">mod: <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@copyTo(mod:BIDMach.models.Model):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#datasource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="datasource:BIDMach.datasources.DataSource"></a>
+      <a id="datasource:DataSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">datasource</span><span class="result">: <a href="../datasources/DataSource.html" class="extype" name="BIDMach.datasources.DataSource">DataSource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@datasource:BIDMach.datasources.DataSource" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#doblock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doblock(gmats:Array[BIDMat.Mat],ipass:Int,i:Long):Unit"></a>
+      <a id="doblock(Array[Mat],Int,Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doblock</span><span class="params">(<span name="gmats">gmats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="i">i: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@doblock(gmats:Array[BIDMat.Mat],ipass:Int,i:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#doblockg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="doblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):Unit"></a>
+      <a id="doblockg(Array[Mat],Int,Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">doblockg</span><span class="params">(<span name="amats">amats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@doblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#evalblock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="evalblock(mats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat"></a>
+      <a id="evalblock(Array[Mat],Int,Long):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evalblock</span><span class="params">(<span name="mats">mats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@evalblock(mats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#evalblockg" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="evalblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat"></a>
+      <a id="evalblockg(Array[Mat],Int,Long):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">evalblockg</span><span class="params">(<span name="amats">amats: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>, <span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>, <span name="here">here: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@evalblockg(amats:Array[BIDMat.Mat],ipass:Int,here:Long):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.Model#gmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="gmats:Array[BIDMat.Mat]"></a>
+      <a id="gmats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gmats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@gmats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.FM#init" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="init():Unit"></a>
+      <a id="init():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">init</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@init():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMach.models.FM#iweight" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="iweight:BIDMat.Mat"></a>
+      <a id="iweight:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">iweight</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@iweight:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#linkArray" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="linkArray:Array[BIDMach.models.GLM.GLMlink]"></a>
+      <a id="linkArray:Array[GLMlink]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">linkArray</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="GLM$$GLMlink.html" class="extype" name="BIDMach.models.GLM.GLMlink">GLMlink</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@linkArray:Array[BIDMach.models.GLM.GLMlink]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#llim" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="llim:BIDMat.Mat"></a>
+      <a id="llim:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">llim</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@llim:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RegressionModel#mask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mask:BIDMat.Mat"></a>
+      <a id="mask:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mask</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mask:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#mats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mats:Array[BIDMat.Mat]"></a>
+      <a id="mats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#meval" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="meval(in:BIDMat.Mat):BIDMat.FMat"></a>
+      <a id="meval(Mat):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">meval</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@meval(in:BIDMat.Mat):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#meval2" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="meval2(in:BIDMat.Mat,targ:BIDMat.Mat):BIDMat.FMat"></a>
+      <a id="meval2(Mat,Mat):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">meval2</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@meval2(in:BIDMat.Mat,targ:BIDMat.Mat):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#meval3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="meval3(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):BIDMat.FMat"></a>
+      <a id="meval3(Mat,Mat,Mat):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">meval3</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="dweights">dweights: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@meval3(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#meval4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="meval4(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):BIDMat.FMat"></a>
+      <a id="meval4(Mat,Mat,Mat):FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">meval4</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="dweights">dweights: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@meval4(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#mm1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mm1:BIDMat.Mat"></a>
+      <a id="mm1:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mm1</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mm1:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#mm2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mm2:BIDMat.Mat"></a>
+      <a id="mm2:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mm2</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mm2:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#modelmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modelmats:Array[BIDMat.Mat]"></a>
+      <a id="modelmats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">modelmats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@modelmats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#mupdate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mupdate(in:BIDMat.Mat):Unit"></a>
+      <a id="mupdate(Mat):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mupdate</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mupdate(in:BIDMat.Mat):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#mupdate2" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mupdate2(in:BIDMat.Mat,targ:BIDMat.Mat):Unit"></a>
+      <a id="mupdate2(Mat,Mat):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mupdate2</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mupdate2(in:BIDMat.Mat,targ:BIDMat.Mat):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMach.models.FM">FM</a> → <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#mupdate3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mupdate3(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):Any"></a>
+      <a id="mupdate3(Mat,Mat,Mat):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mupdate3</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="dweights">dweights: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mupdate3(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):Any" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#mupdate4" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mupdate4(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):Any"></a>
+      <a id="mupdate4(Mat,Mat,Mat):Any"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mupdate4</span><span class="params">(<span name="in">in: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="targ">targ: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="dweights">dweights: <span class="extype" name="BIDMat.Mat">Mat</span></span>)</span><span class="result">: <span class="extype" name="scala.Any">Any</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mupdate4(in:BIDMat.Mat,targ:BIDMat.Mat,dweights:BIDMat.Mat):Any" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#mv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mv:BIDMat.Mat"></a>
+      <a id="mv:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mv</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mv:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#mylinks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mylinks:BIDMat.Mat"></a>
+      <a id="mylinks:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mylinks</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@mylinks:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#opts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opts:BIDMach.models.RegressionModel.Opts"></a>
+      <a id="opts:Opts"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opts</span><span class="result">: <a href="RegressionModel$$Opts.html" class="extype" name="BIDMach.models.RegressionModel.Opts">Opts</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@opts:BIDMach.models.RegressionModel.Opts" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a> → <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#parent_model" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parent_model:BIDMach.models.Model"></a>
+      <a id="parent_model:Model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">parent_model</span><span class="result">: <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@parent_model:BIDMach.models.Model" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#putBack" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="putBack:Int"></a>
+      <a id="putBack:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">putBack</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@putBack:Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#refresh" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="refresh:Boolean"></a>
+      <a id="refresh:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">refresh</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@refresh:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#setmodelmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="setmodelmats(a:Array[BIDMat.Mat]):Unit"></a>
+      <a id="setmodelmats(Array[Mat]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">setmodelmats</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@setmodelmats(a:Array[BIDMat.Mat]):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#sp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sp:BIDMat.Mat"></a>
+      <a id="sp:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sp</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@sp:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#targets" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="targets:BIDMat.Mat"></a>
+      <a id="targets:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">targets</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@targets:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="BIDMach.models.RegressionModel#targmap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="targmap:BIDMat.Mat"></a>
+      <a id="targmap:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">targmap</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@targmap:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.FM#totflops" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="totflops:Long"></a>
+      <a id="totflops:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">totflops</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@totflops:Long" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#ulim" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ulim:BIDMat.Mat"></a>
+      <a id="ulim:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ulim</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@ulim:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#um1" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="um1:BIDMat.Mat"></a>
+      <a id="um1:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">um1</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@um1:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM#um2" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="um2:BIDMat.Mat"></a>
+      <a id="um2:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">um2</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@um2:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model#updatePass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatePass(ipass:Int):Unit"></a>
+      <a id="updatePass(Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updatePass</span><span class="params">(<span name="ipass">ipass: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@updatePass(ipass:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#updatemats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="updatemats:Array[BIDMat.Mat]"></a>
+      <a id="updatemats:Array[Mat]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updatemats</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<span class="extype" name="BIDMat.Mat">Mat</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@updatemats:Array[BIDMat.Mat]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#useDouble" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="useDouble:Boolean"></a>
+      <a id="useDouble:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useDouble</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@useDouble:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.Model#useGPU" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="useGPU:Boolean"></a>
+      <a id="useGPU:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">useGPU</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@useGPU:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.FM#uv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="uv:BIDMat.Mat"></a>
+      <a id="uv:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">uv</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@uv:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMach.models.FM#xs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="xs:BIDMat.Mat"></a>
+      <a id="xs:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xs</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.FM@xs:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="BIDMach.models.RegressionModel">
+              <h3>Inherited from <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></h3>
+            </div><div class="parent" name="BIDMach.models.Model">
+              <h3>Inherited from <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

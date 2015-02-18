@@ -1,0 +1,885 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>models - BIDMach.models</title>
+          <meta name="description" content="models - BIDMach.models" />
+          <meta name="keywords" content="models BIDMach.models" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'BIDMach.models.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="BIDMach">BIDMach</a></p>
+        <h1>models</h1> <span class="permalink">
+      <a href="../../index.html#BIDMach.models.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">models</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="BIDMach.models.BayesNet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BayesNetextendsModel"></a>
+      <a id="BayesNet:BayesNet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BayesNet.html"><span class="name">BayesNet</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@BayesNetextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">WIP: Bayes network using cooled Gibbs parameter estimation
+</p>
+    </li><li name="BIDMach.models.ClusteringModel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ClusteringModelextendsModel"></a>
+      <a id="ClusteringModel:ClusteringModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusteringModel.html"><span class="name">ClusteringModel</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@ClusteringModelextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An abstract class with shared code for Clustering Models
+</p>
+    </li><li name="BIDMach.models.DNN" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DNNextendsModel"></a>
+      <a id="DNN:DNN"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DNN.html"><span class="name">DNN</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@DNNextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Basic DNN class.</p><div class="fullcomment"><div class="comment cmt"><p>Basic DNN class. Learns a supervised map from input blocks to output (target) data blocks. There are currently 4 layer types:</p><ul><li>InputLayer: just a placeholder for the first layer which is loaded with input data blocks. No learnable params.</li><li>FCLayer: Fully-Connected Linear layer. Has a matrix of learnable params which is the input-output map.</li><li>RectLayer: Rectifying one-to-one layer. No params.</li><li>GLMLayer: a one-to-one layer with GLM mappings (linear, logistic, abs-logistic and SVM). No learnable params.</li></ul><p>The network topology is specified by opts.layers which is a sequence of &quot;LayerSpec&quot; objects. There is a LayerSpec
+Class for each Layer class, which holds the params for defining that layer. Currently only two LayerSpec types need params:</p><ul><li>FC: holds the output dimensions of the FClayer (input dimension set by previous layer).</li><li>GLM: holds the links matrix (integer specs for loss types, see GLM), for the output of that layer. Its size should match the
+number of targets.
+</li></ul></div></div>
+    </li><li name="BIDMach.models.FM" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FMextendsRegressionModel"></a>
+      <a id="FM:FM"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FM.html"><span class="name">FM</span></a><span class="result"> extends <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@FMextendsRegressionModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Factorization Machine Model.</p><div class="fullcomment"><div class="comment cmt"><p>Factorization Machine Model.
+This class computes a factorization machine model a la</p><p>Steffen Rendle (2012): Factorization Machines with libFM, in ACM Trans. Intell. Syst. Technol., 3(3), May.</p><p>We depart slightly from the original FM formulation by including both positive definite and negative definite factors.
+While the positive definite factor can approximate any matrix in the limit, using both positive and negative definite factors
+should give better performance for a fixed number of factors. This is what we observed on several datasets.
+With both positive definite and negative definite factors, there should also be no need to remove diagonal terms, since
+the positive and negative factorizations already form a conventional eigendecomposition (a best least-squares fit for a given
+number of factors) of the matrix of second-order interactions.</p><p>The types of model are given by the values of opts.links (IMat) and are the same as for GLM models. They are:</p><ul><li>0 = linear model (squared loss)</li><li>1 = logistic model (logistic loss)</li><li>2 = absolute logistic (hinge loss on logistic prediction)</li><li>3 = SVM model (hinge loss)</li></ul><p>Options are:</p><ul><li>  links: an IMat whose nrows should equal the number of targets. Values as above. Can be different for different targets.</li><li>  iweight: an FMat typically used to select a weight row from the input. i.e. iweight = 0,1,0,0,0 uses the second
+           row of input data as weights to be applied to input samples. The iweight field should be 0 in mask.</li><li>  dim1: Dimension of the positive definite factor</li><li>  dim2: Dimension of the negative definite factor</li><li>  strictFM: the exact FM model zeros the diagonal terms of the factorization. As mentioned above, this probably isn't needed
+            in our version of the model, but its available.</li></ul><p>Inherited from Regression Model:</p><ul><li>  rmask: FMat, optional, 0-1-valued. Used to ignore certain input rows (which are targets or weights).
+         Zero value in an element will ignore the corresponding row.</li><li>  targets: FMat, optional, 0-1-valued. ntargs x nfeats. Used to specify which input features corresponding to targets.</li><li>  targmap: FMat, optional, 0-1-valued. nntargs x ntargs. Used to replicate actual targets, e.g. to train multiple models
+           (usually with different parameters) for the same target.</li></ul><p>Some convenience functions for training:</p><pre><span class="kw">val</span> (mm, opts) = FM.learner(a, d)     <span class="cmt">// On an input matrix a including targets (set opts.targets to specify them),</span>
+                                      <span class="cmt">// learns an FM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (mm, opts) = FM.learner(a, c, d)  <span class="cmt">// On an input matrix a and target matrix c, learns an FM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (nn, nopts) = FM.predictor(model, ta, pc, d) <span class="cmt">// constructs a prediction learner from an existing model. returns the learner and options.</span>
+                                      <span class="cmt">// pc should be the same dims as the test label matrix, and will contain results after nn.predict</span>
+<span class="kw">val</span> (mm, mopts, nn, nopts) = FM.learner(a, c, ta, pc, d) <span class="cmt">// a = training data, c = training labels, ta = test data, pc = prediction matrix, d = type.</span>
+                                      <span class="cmt">// returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.</span>
+                                      <span class="cmt">// typically set options, then do mm.train; nn.predict with results in pc.</span>
+<span class="kw">val</span> (mm, opts) = learner(ds)          <span class="cmt">// Build a learner for a general datasource ds (e.g. a files data source).</span></pre></div></div>
+    </li><li name="BIDMach.models.FactorModel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="FactorModelextendsModel"></a>
+      <a id="FactorModel:FactorModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FactorModel.html"><span class="name">FactorModel</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@FactorModelextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An Abstract class with shared code for Factor Models
+</p>
+    </li><li name="BIDMach.models.GLM" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GLMextendsRegressionModel"></a>
+      <a id="GLM:GLM"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GLM.html"><span class="name">GLM</span></a><span class="result"> extends <a href="RegressionModel.html" class="extype" name="BIDMach.models.RegressionModel">RegressionModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@GLMextendsRegressionModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Train a GLM model.</p><div class="fullcomment"><div class="comment cmt"><p>Train a GLM model. The types of model are given by the values of opts.links (IMat). They are:</p><ul><li>0 = linear model (squared loss)</li><li>1 = logistic model (logistic loss)</li><li>2 = hinge logistic (hinge loss on logistic prediction)</li><li>3 = SVM model (hinge loss)</li></ul><p>Options are:</p><ul><li>  links: an IMat whose nrows should equal the number of targets. Values as above. Can be different for different targets.</li><li>  iweight: an FMat typically used to select a weight row from the input. i.e. iweight = 0,1,0,0,0 uses the second
+           row of input data as weights to be applied to input samples. The iweight field should be 0 in mask.</li></ul><p>Inherited from Regression Model:</p><ul><li>  rmask: FMat, optional, 0-1-valued. Used to ignore certain input rows (which are targets or weights).
+         Zero value in an element will ignore the corresponding row.</li><li>  targets: FMat, optional, 0-1-valued. ntargs x nfeats. Used to specify which input features corresponding to targets.</li><li>  targmap: FMat, optional, 0-1-valued. nntargs x ntargs. Used to replicate actual targets, e.g. to train multiple models
+           (usually with different parameters) for the same target.</li></ul><p>Some convenience functions for training:</p><pre><span class="kw">val</span> (mm, opts) = GLM.learner(a, d)    <span class="cmt">// On an input matrix a including targets (set opts.targets to specify them),</span>
+                                      <span class="cmt">// learns a GLM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (mm, opts) = GLM.learner(a, c, d) <span class="cmt">// On an input matrix a and target matrix c, learns a GLM model of type d.</span>
+                                      <span class="cmt">// returns the model (nn) and the options class (opts).</span>
+<span class="kw">val</span> (nn, nopts) = predictor(model, ta, pc, d) <span class="cmt">// constructs a prediction learner from an existing model. returns the learner and options.</span>
+                                      <span class="cmt">// pc should be the same dims as the test label matrix, and will contain results after nn.predict</span>
+<span class="kw">val</span> (mm, mopts, nn, nopts) = GLM.learner(a, c, ta, pc, d) <span class="cmt">// a = training data, c = training labels, ta = test data, pc = prediction matrix, d = type.</span>
+                                      <span class="cmt">// returns a training learner mm, with options mopts. Also returns a prediction model nn with its own options.</span>
+                                      <span class="cmt">// typically set options, then do mm.train; nn.predict with results in pc.</span>
+<span class="kw">val</span> (mm, opts) = learner(ds)          <span class="cmt">// Build a learner for a general datasource ds (e.g. a files data source).</span></pre></div></div>
+    </li><li name="BIDMach.models.Graph" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GraphextendsAnyRef"></a>
+      <a id="Graph:Graph"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Graph.html"><span class="name">Graph</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@GraphextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.ICA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ICAextendsFactorModel"></a>
+      <a id="ICA:ICA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ICA.html"><span class="name">ICA</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@ICAextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Independent Component Analysis, using FastICA.</p><div class="fullcomment"><div class="comment cmt"><p>Independent Component Analysis, using FastICA. It has the ability to center and whiten data. See below
+for features and possible limitations.</p><p>Our algorithm is based on the method presented in:</p><p>A. Hyvärinen and E. Oja. Independent Component Analysis: Algorithms and Applications.
+Neural Networks, 13(4-5):411-430, 2000.</p><p>In particular, we provide the logcosh, exponential, and kurtosis &quot;G&quot; functions.</p><p>This algorithm computes the following modelmats array:</p><p>  &gt; modelmats(0) stores the inverse of the mixing matrix. If X = A*S represents the data, then it's the
+    estimated A<sup>{-1}, which we assume is square and invertible for now.
+  &gt; modelmats(1) stores the mean vector of the data, which is computed entirely on the first pass. This
+    means once we estimate A</sup>{-1} in modelmats(0), we need to first shift the data by this amount, and
+    then multiply to recover the (centered) sources. Example:</p><pre>modelmats(<span class="num">0</span>) * (data - modelmats(<span class="num">1</span>))</pre><p>    Here, data is an n x N matrix, whereas modelmats(1) is an n x 1 matrix. For efficiency reasons, we
+    assume a constant batch size for each block of data so we take the mean across all batches. This is
+    true except for (usually) the last batch, but this often isn't enough to make a difference.</p><p>Thus, modelmats(1) helps to center the data. The whitening in this algorithm happens during the updates
+to W in both the orthogonalization and the fixed point steps. The former uses the computed convariance
+matrix and the latter relies on an approximation of W^T*W to the inverse covariance matrix. It is fine
+if the data is already pre-whitened before being passed to BIDMach.</p><p>Currently, we are working on the following extensions:</p><p>  &gt; Allowing ICA to handle non-square mixing matrices. Most research about ICA assumes that A is n x n.
+  &gt; Improving the way we handle the computation of the mean, so it doesn't rely on the last batch being
+    of similar size to all prior batches. Again, this is minor, especially for large data sets.</p><p>For additional references, see Aapo Hyvärinen's other papers, and visit:
+  http://research.ics.aalto.fi/ica/fastica/
+</p></div></div>
+    </li><li name="BIDMach.models.KMeans" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KMeansextendsClusteringModel"></a>
+      <a id="KMeans:KMeans"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="KMeans.html"><span class="name">KMeans</span></a><span class="result"> extends <a href="ClusteringModel.html" class="extype" name="BIDMach.models.ClusteringModel">ClusteringModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@KMeansextendsClusteringModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">KMeans</p><div class="fullcomment"><div class="comment cmt"><p>KMeans</p><pre><span class="kw">val</span> (nn, opts) = KMeans.learner(a)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.dim=<span class="num">200</span>          <span class="cmt">// customize options</span>
+nn.train              <span class="cmt">// rain the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+
+<span class="kw">val</span> (nn, opts) = KMeans.learnPar(a) <span class="cmt">// Build a parallel learner</span>
+opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.train              <span class="cmt">// train the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span></pre></div></div>
+    </li><li name="BIDMach.models.KMeansw" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="KMeanswextendsModel"></a>
+      <a id="KMeansw:KMeansw"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="KMeansw.html"><span class="name">KMeansw</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@KMeanswextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">KMeans</p><div class="fullcomment"><div class="comment cmt"><p>KMeans</p><pre><span class="kw">val</span> (nn, opts) = KMeansw.learner(a,w)
+<span class="kw">val</span> (nn, opts) = KMeansw.learner(a)
+a                     <span class="cmt">// input matrix</span>
+w                     <span class="cmt">// optional weight matrix</span>
+opts.what             <span class="cmt">// prints the available options</span>
+opts.dim=<span class="num">200</span>          <span class="cmt">// customize options</span>
+nn.train              <span class="cmt">// train the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a,w) <span class="cmt">// Build a parallel learner</span>
+<span class="kw">val</span> (nn, opts) = KMeansw.learnPar(a)
+opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.train              <span class="cmt">// train the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span></pre></div></div>
+    </li><li name="BIDMach.models.LDA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LDAextendsFactorModel"></a>
+      <a id="LDA:LDA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LDA.html"><span class="name">LDA</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDAextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">LDA model using online Variational Bayes (Hoffman, Blei and Bach, 2010)</p><div class="fullcomment"><div class="comment cmt"><p>LDA model using online Variational Bayes (Hoffman, Blei and Bach, 2010)</p><p><b>Parameters</b></p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>alpha(0.001f): Dirichlet document-topic prior</li><li>beta(0.0001f): Dirichlet word-topic prior</li><li>exppsi(true):  Apply exp(psi(X)) if true, otherwise just use X</li><li>LDAeps(1e-9):  A safety floor constant</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>blockSize: the number of samples processed in a block</li><li>power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power</li><li>npasses(10): number of complete passes over the dataset</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDA.learner(a)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.uiter=<span class="num">2</span>          <span class="cmt">// customize options</span>
+nn.train              <span class="cmt">// train the model</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor (requires opts.putBack=1)</span>
+
+<span class="kw">val</span> (nn, opts) = LDA.learnPar(a) <span class="cmt">// Build a parallel learner</span>
+opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.train              <span class="cmt">// train the model</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor</span></pre></div></div>
+    </li><li name="BIDMach.models.LDAgibbs" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LDAgibbsextendsFactorModel"></a>
+      <a id="LDAgibbs:LDAgibbs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LDAgibbs.html"><span class="name">LDAgibbs</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDAgibbsextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:</p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>alpha(0.001f) Dirichlet prior on document-topic weights</li><li>beta(0.0001f) Dirichlet prior on word-topic weights</li><li>nsamps(100) the number of repeated samples to take</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize: the number of samples processed in a block</li><li>power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power</li><li>npasses(10): number of complete passes over the dataset</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.uiter=<span class="num">2</span>          <span class="cmt">// customize options</span>
+nn.run                <span class="cmt">// run the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor (requires opts.putBack=1)</span>
+
+<span class="kw">val</span> (nn, opts) = LDAgibbs.learnPar(a) <span class="cmt">// Build a parallel learner</span>
+opts.nthreads = <span class="num">2</span>     <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.run                <span class="cmt">// run the learner</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor</span></pre></div></div>
+    </li><li name="BIDMach.models.LDAgibbsv" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LDAgibbsvextendsFactorModel"></a>
+      <a id="LDAgibbsv:LDAgibbsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LDAgibbsv.html"><span class="name">LDAgibbsv</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDAgibbsvextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:
+- dim(256): Model dimension
+- uiter(5): Number of iterations on one block of data
+- alpha(0.001f) Dirichlet prior on document-topic weights
+- beta(0.0001f) Dirichlet prior on word-topic weights
+- nsamps(100) the number of repeated samples to take</p><p>Other key parameters inherited from the learner, datasource and updater:
+- blockSize: the number of samples processed in a block
+- power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power
+- npasses(10): number of complete passes over the dataset</p><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)
+opts.what <span class="cmt">// prints the available options</span>
+opts.uiter=<span class="num">2</span> <span class="cmt">// customize options</span>
+nn.run <span class="cmt">// run the learner</span>
+nn.modelmat <span class="cmt">// get the final model</span>
+nn.datamat <span class="cmt">// get the other factor (requires opts.putBack=1)</span>
+
+<span class="kw">val</span> (nn, opts) = LDAgibbs.learnPar(a) <span class="cmt">// Build a parallel learner</span>
+opts.nthreads = <span class="num">2</span> <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.run <span class="cmt">// run the learner</span>
+nn.modelmat <span class="cmt">// get the final model</span>
+nn.datamat <span class="cmt">// get the other factor</span></pre></div></div>
+    </li><li name="BIDMach.models.Model" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ModelextendsAnyRef"></a>
+      <a id="Model:Model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Model.html"><span class="name">Model</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@ModelextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Abstract class with shared code for all models
+</p>
+    </li><li name="BIDMach.models.NMF" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NMFextendsFactorModel"></a>
+      <a id="NMF:NMF"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NMF.html"><span class="name">NMF</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@NMFextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Non-negative Matrix Factorization (NMF) with L2 loss</p><div class="fullcomment"><div class="comment cmt"><p>Non-negative Matrix Factorization (NMF) with L2 loss</p><p><b>Parameters</b></p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>uprior: Prior on the user (data) factor</li><li>mprior: Prior on the model</li><li>NMFeps(1e-9):  A safety floor constant</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize: the number of samples processed in a block</li><li>power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power</li><li>npasses(2): number of complete passes over the dataset</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = NMF.learner(a)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.uiter=<span class="num">2</span>          <span class="cmt">// customize options</span>
+nn.train              <span class="cmt">// train the model</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor (requires opts.putBack=1)</span>
+
+<span class="kw">val</span> (nn, opts) = NMF.learnPar(a) <span class="cmt">// Build a parallel learner</span>
+opts.nthreads=<span class="num">2</span>       <span class="cmt">// number of threads (defaults to number of GPUs)</span>
+nn.train              <span class="cmt">// run the model</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor</span></pre></div></div>
+    </li><li name="BIDMach.models.RandomForest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RandomForestextendsModel"></a>
+      <a id="RandomForest:RandomForest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomForest.html"><span class="name">RandomForest</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@RandomForestextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RegressionModel" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RegressionModelextendsModel"></a>
+      <a id="RegressionModel:RegressionModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RegressionModel.html"><span class="name">RegressionModel</span></a><span class="result"> extends <a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@RegressionModelextendsModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Abstract class with shared code for Regression Models
+</p>
+    </li><li name="BIDMach.models.SFA" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SFAextendsFactorModel"></a>
+      <a id="SFA:SFA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SFA.html"><span class="name">SFA</span></a><span class="result"> extends <a href="FactorModel.html" class="extype" name="BIDMach.models.FactorModel">FactorModel</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@SFAextendsFactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Sparse Matrix Factorization with L2 loss (similar to ALS).</p><div class="fullcomment"><div class="comment cmt"><p>Sparse Matrix Factorization with L2 loss (similar to ALS).</p><p><b>Parameters</b></p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>miter(5): Number of CG iterations for model updates - not currently used in the SGD implementation.</li><li>lambdau(5f): Prior on the user (data) factor</li><li>lambdam(5f): Prior on model</li><li>regumean(0f): prior on instance mean</li><li>regmmean(0f): Prior on feature mean</li><li>startup(1): Skip CG for this many iterations</li><li>traceConvergence(false): Print out trace info for convergence of the u iterations.</li><li>doUser(false): Apply the per-instance mean estimate.</li><li>weightByUser(false): Weight loss equally by users, rather than their number of choices.</li><li>ueps(1e-10f): A safety floor constant</li><li>uconvg(1e-3f): Stop u iteration if error smaller than this.</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize: the number of samples processed in a block</li><li>npasses(2): number of complete passes over the dataset</li><li>useGPU(true): Use GPU acceleration if available.</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = SFA.learner(a)
+opts.what             <span class="cmt">// prints the available options</span>
+opts.uiter=<span class="num">2</span>          <span class="cmt">// customize options</span>
+nn.train              <span class="cmt">// train the model</span>
+nn.modelmat           <span class="cmt">// get the final model</span>
+nn.datamat            <span class="cmt">// get the other factor (requires opts.putBack=1)</span></pre></div></div>
+    </li><li name="BIDMach.models.SVTree" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SVTreeextendsAnyRef"></a>
+      <a id="SVTree:SVTree"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SVTree.html"><span class="name">SVTree</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@SVTreeextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.SVec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SVecextendsAnyRef"></a>
+      <a id="SVec:SVec"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SVec.html"><span class="name">SVec</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@SVecextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="BIDMach.models.BayesNet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BayesNet"></a>
+      <a id="BayesNet:BayesNet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BayesNet$.html"><span class="name">BayesNet</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@BayesNet" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.ClusteringModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ClusteringModel"></a>
+      <a id="ClusteringModel:ClusteringModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ClusteringModel$.html"><span class="name">ClusteringModel</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@ClusteringModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.DNN" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DNN"></a>
+      <a id="DNN:DNN"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DNN$.html"><span class="name">DNN</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@DNN" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FM" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FM"></a>
+      <a id="FM:FM"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FM$.html"><span class="name">FM</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@FM" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.FactorModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FactorModel"></a>
+      <a id="FactorModel:FactorModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FactorModel$.html"><span class="name">FactorModel</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@FactorModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.GLM" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GLM"></a>
+      <a id="GLM:GLM"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GLM$.html"><span class="name">GLM</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@GLM" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.ICA" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ICA"></a>
+      <a id="ICA:ICA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ICA$.html"><span class="name">ICA</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@ICA" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.KMeans" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KMeans"></a>
+      <a id="KMeans:KMeans"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="KMeans$.html"><span class="name">KMeans</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@KMeans" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.KMeansw" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="KMeansw"></a>
+      <a id="KMeansw:KMeansw"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="KMeansw$.html"><span class="name">KMeansw</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@KMeansw" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.LDA" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LDA"></a>
+      <a id="LDA:LDA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LDA$.html"><span class="name">LDA</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDA" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.LDAgibbs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LDAgibbs"></a>
+      <a id="LDAgibbs:LDAgibbs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LDAgibbs$.html"><span class="name">LDAgibbs</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDAgibbs" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.LDAgibbsv" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LDAgibbsv"></a>
+      <a id="LDAgibbsv:LDAgibbsv"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LDAgibbsv$.html"><span class="name">LDAgibbsv</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@LDAgibbsv" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.Model" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Model"></a>
+      <a id="Model:Model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Model$.html"><span class="name">Model</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@Model" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.NMF" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NMF"></a>
+      <a id="NMF:NMF"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NMF$.html"><span class="name">NMF</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@NMF" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RandomForest" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RandomForest"></a>
+      <a id="RandomForest:RandomForest"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomForest$.html"><span class="name">RandomForest</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@RandomForest" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.RegressionModel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RegressionModel"></a>
+      <a id="RegressionModel:RegressionModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RegressionModel$.html"><span class="name">RegressionModel</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@RegressionModel" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.SFA" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SFA"></a>
+      <a id="SFA:SFA"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SFA$.html"><span class="name">SFA</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@SFA" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.SVec" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SVec"></a>
+      <a id="SVec:SVec"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SVec$.html"><span class="name">SVec</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.package@SVec" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
