@@ -47,12 +47,13 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>This version (v) supports per-model-element sample counts,
+e.g. for local heating or cooling of particular model coefficients.</p><p>Extends Factor Model Options with:
 - dim(256): Model dimension
 - uiter(5): Number of iterations on one block of data
 - alpha(0.001f) Dirichlet prior on document-topic weights
 - beta(0.0001f) Dirichlet prior on word-topic weights
-- nsamps(100) the number of repeated samples to take</p><p>Other key parameters inherited from the learner, datasource and updater:
+- nsamps(row(100)) matrix with the number of repeated samples to take</p><p>Other key parameters inherited from the learner, datasource and updater:
 - blockSize: the number of samples processed in a block
 - power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power
 - npasses(10): number of complete passes over the dataset</p><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)
@@ -688,6 +689,23 @@ nn.datamat <span class="cmt">// get the other factor</span></pre></div><div clas
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMach.models.LDAgibbsv#nsamps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nsamps:BIDMat.Mat"></a>
+      <a id="nsamps:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nsamps</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.LDAgibbsv@nsamps:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="BIDMach.models.LDAgibbsv#opts" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="opts:BIDMach.models.LDAgibbsv.Opts"></a>
       <a id="opts:Opts"></a>
@@ -841,6 +859,23 @@ nn.datamat <span class="cmt">// get the other factor</span></pre></div><div clas
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.LDAgibbsv#updateSamps" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="updateSamps:BIDMat.Mat"></a>
+      <a id="updateSamps:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">updateSamps</span><span class="result">: <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.LDAgibbsv@updateSamps:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="BIDMach.models.Model#updatemats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="updatemats:Array[BIDMat.Mat]"></a>
       <a id="updatemats:Array[Mat]"></a>

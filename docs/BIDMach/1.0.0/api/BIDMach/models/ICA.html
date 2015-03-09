@@ -47,20 +47,21 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Independent Component Analysis, using FastICA. It has the ability to center and whiten data. See below
-for features and possible limitations.</p><p>Our algorithm is based on the method presented in:</p><p>A. Hyvärinen and E. Oja. Independent Component Analysis: Algorithms and Applications.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Independent Component Analysis, using FastICA. It has the ability to center and whiten data. It is
+based on the method presented in:</p><p>A. Hyvärinen and E. Oja. Independent Component Analysis: Algorithms and Applications.
 Neural Networks, 13(4-5):411-430, 2000.</p><p>In particular, we provide the logcosh, exponential, and kurtosis &quot;G&quot; functions.</p><p>This algorithm computes the following modelmats array:</p><p>  &gt; modelmats(0) stores the inverse of the mixing matrix. If X = A*S represents the data, then it's the
     estimated A<sup>{-1}, which we assume is square and invertible for now.
   &gt; modelmats(1) stores the mean vector of the data, which is computed entirely on the first pass. This
     means once we estimate A</sup>{-1} in modelmats(0), we need to first shift the data by this amount, and
     then multiply to recover the (centered) sources. Example:</p><pre>modelmats(<span class="num">0</span>) * (data - modelmats(<span class="num">1</span>))</pre><p>    Here, data is an n x N matrix, whereas modelmats(1) is an n x 1 matrix. For efficiency reasons, we
     assume a constant batch size for each block of data so we take the mean across all batches. This is
-    true except for (usually) the last batch, but this often isn't enough to make a difference.</p><p>Thus, modelmats(1) helps to center the data. The whitening in this algorithm happens during the updates
-to W in both the orthogonalization and the fixed point steps. The former uses the computed convariance
+    true except for (usually) the last batch, but this almost always isn't enough to make a difference.</p><p>Thus, modelmats(1) helps to center the data. The whitening in this algorithm happens during the updates
+to W in both the orthogonalization and the fixed point steps. The former uses the computed covariance
 matrix and the latter relies on an approximation of W^T*W to the inverse covariance matrix. It is fine
-if the data is already pre-whitened before being passed to BIDMach.</p><p>Currently, we are working on the following extensions:</p><p>  &gt; Allowing ICA to handle non-square mixing matrices. Most research about ICA assumes that A is n x n.
+if the data is already pre-whitened before being passed to BIDMach.</p><p>Currently, we are thinking about the following extensions:</p><p>  &gt; Allowing ICA to handle non-square mixing matrices. Most research about ICA assumes that A is n x n.
   &gt; Improving the way we handle the computation of the mean, so it doesn't rely on the last batch being
-    of similar size to all prior batches. Again, this is minor, especially for large data sets.</p><p>For additional references, see Aapo Hyvärinen's other papers, and visit:
+    of similar size to all prior batches. Again, this is minor, especially for large data sets.
+  &gt; Thinking of ways to make this scale better to a large variety of datasets</p><p>For additional references, see Aapo Hyvärinen's other papers, and visit:
   http://research.ics.aalto.fi/ica/fastica/
 </p></div><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
@@ -179,6 +180,23 @@ if the data is already pre-whitened before being passed to BIDMach.</p><p>Curren
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMach.models.ICA#G_fun" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="G_fun:BIDMat.Mat=&gt;BIDMat.Mat"></a>
+      <a id="G_fun:(Mat)⇒Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">G_fun</span><span class="result">: (<span class="extype" name="BIDMat.Mat">Mat</span>) ⇒ <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.ICA@G_fun:BIDMat.Mat=&gt;BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="BIDMach.models.Model#_modelmats" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_modelmats:Array[BIDMat.Mat]"></a>
       <a id="_modelmats:Array[Mat]"></a>
@@ -442,7 +460,7 @@ if the data is already pre-whitened before being passed to BIDMach.</p><p>Curren
       <p class="shortcomment cmt">Currently, this computes the approximation of negentropy, which is the objective function to maximize.</p><div class="fullcomment"><div class="comment cmt"><p>Currently, this computes the approximation of negentropy, which is the objective function to maximize.</p><p>To understand this, let w be a single row vector of W, let x be a single data vector, and let v be a
 standard normal random variable. To find this one independent component, we maximize</p><p>  J(w<sup>Tx) \approx ( Expec[G(w</sup>Tx)] - Expec[G(v)] )^2,</p><p>where G is the function set at opts.G_function. So long as the W matrix (capital &quot;W&quot;) is orthogonal,
 which we do enforce, then w<sup>Tx satisfies the requirement that the variance be one. To extend this to
-the whole matrix W, take the sum over all the rows, so the problem is: maxmize{ \sum_w J(w</sup>Tx) }.</p><p>On the other hand, the batchSize should be much greater than one, so &quot;data&quot; consists of many columns.
+the whole matrix W, take the sum over all the rows, so the problem is: maximize{ \sum_w J(w</sup>Tx) }.</p><p>On the other hand, the batchSize should be much greater than one, so &quot;data&quot; consists of many columns.
 Denoting the data matrix as X, we can obtain the expectations by taking the sample means. In other words,
 we take the previous &quot;user&quot; matrix, W*X, apply the function G to the data, and THEN take the mean across
 rows, so mean(G(W*X),2). The mean across rows gives what we want since it's applying the same row of W to
@@ -472,6 +490,40 @@ different x (column) vectors in our data.
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="BIDMach.models.ICA#g_d_fun" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="g_d_fun:BIDMat.Mat=&gt;BIDMat.Mat"></a>
+      <a id="g_d_fun:(Mat)⇒Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">g_d_fun</span><span class="result">: (<span class="extype" name="BIDMat.Mat">Mat</span>) ⇒ <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.ICA@g_d_fun:BIDMat.Mat=&gt;BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMach.models.ICA#g_fun" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="g_fun:BIDMat.Mat=&gt;BIDMat.Mat"></a>
+      <a id="g_fun:(Mat)⇒Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">g_fun</span><span class="result">: (<span class="extype" name="BIDMat.Mat">Mat</span>) ⇒ <span class="extype" name="BIDMat.Mat">Mat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.ICA@g_fun:BIDMat.Mat=&gt;BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -785,6 +837,23 @@ that the update here includes an approximation to the inverse covariance matrix.
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Model.html" class="extype" name="BIDMach.models.Model">Model</a></dd></dl></div>
+    </li><li name="BIDMach.models.ICA#stdNorm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="stdNorm:BIDMat.FMat"></a>
+      <a id="stdNorm:FMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">var</span>
+      </span>
+      <span class="symbol">
+        <span class="name">stdNorm</span><span class="result">: <span class="extype" name="BIDMat.FMat">FMat</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.ICA@stdNorm:BIDMat.FMat" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -904,7 +973,7 @@ that the update here includes an approximation to the inverse covariance matrix.
       </a>
     </span>
       <p class="shortcomment cmt">Store data in &quot;user&quot; for use in the next mupdate() call, and updates the moving average if necessary.</p><div class="fullcomment"><div class="comment cmt"><p>Store data in &quot;user&quot; for use in the next mupdate() call, and updates the moving average if necessary.
-Also &quot;orthogonalizes&quot; the model matrix.</p><p>First, it checks if this is the first pass over the data, and if so, updates the moving average assuming
+Also &quot;orthogonalizes&quot; the model matrix after each update, as required by the algorithm.</p><p>First, it checks if this is the first pass over the data, and if so, updates the moving average assuming
 that the number of data samples in each block is the same for all blocks. After the first pass, the data
 mean vector is fixed in modelmats(1). Then the data gets centered via: &quot;data ~ data - modelmats(1)&quot;.</p><p>We also use &quot;user ~ mm * data&quot; to store all (w_j<sup>T) * (x</sup>{i}) values, where w_j<sup>T is the j</sup>th row of our
 estimated W = A<sup>{-1}, and x</sup>{i} is the i^{th} sample in this block of data. These values are later used

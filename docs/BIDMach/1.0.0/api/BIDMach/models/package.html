@@ -240,20 +240,21 @@ number of factors) of the matrix of second-order interactions.</p><p>The types o
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Independent Component Analysis, using FastICA.</p><div class="fullcomment"><div class="comment cmt"><p>Independent Component Analysis, using FastICA. It has the ability to center and whiten data. See below
-for features and possible limitations.</p><p>Our algorithm is based on the method presented in:</p><p>A. Hyvärinen and E. Oja. Independent Component Analysis: Algorithms and Applications.
+      <p class="shortcomment cmt">Independent Component Analysis, using FastICA.</p><div class="fullcomment"><div class="comment cmt"><p>Independent Component Analysis, using FastICA. It has the ability to center and whiten data. It is
+based on the method presented in:</p><p>A. Hyvärinen and E. Oja. Independent Component Analysis: Algorithms and Applications.
 Neural Networks, 13(4-5):411-430, 2000.</p><p>In particular, we provide the logcosh, exponential, and kurtosis &quot;G&quot; functions.</p><p>This algorithm computes the following modelmats array:</p><p>  &gt; modelmats(0) stores the inverse of the mixing matrix. If X = A*S represents the data, then it's the
     estimated A<sup>{-1}, which we assume is square and invertible for now.
   &gt; modelmats(1) stores the mean vector of the data, which is computed entirely on the first pass. This
     means once we estimate A</sup>{-1} in modelmats(0), we need to first shift the data by this amount, and
     then multiply to recover the (centered) sources. Example:</p><pre>modelmats(<span class="num">0</span>) * (data - modelmats(<span class="num">1</span>))</pre><p>    Here, data is an n x N matrix, whereas modelmats(1) is an n x 1 matrix. For efficiency reasons, we
     assume a constant batch size for each block of data so we take the mean across all batches. This is
-    true except for (usually) the last batch, but this often isn't enough to make a difference.</p><p>Thus, modelmats(1) helps to center the data. The whitening in this algorithm happens during the updates
-to W in both the orthogonalization and the fixed point steps. The former uses the computed convariance
+    true except for (usually) the last batch, but this almost always isn't enough to make a difference.</p><p>Thus, modelmats(1) helps to center the data. The whitening in this algorithm happens during the updates
+to W in both the orthogonalization and the fixed point steps. The former uses the computed covariance
 matrix and the latter relies on an approximation of W^T*W to the inverse covariance matrix. It is fine
-if the data is already pre-whitened before being passed to BIDMach.</p><p>Currently, we are working on the following extensions:</p><p>  &gt; Allowing ICA to handle non-square mixing matrices. Most research about ICA assumes that A is n x n.
+if the data is already pre-whitened before being passed to BIDMach.</p><p>Currently, we are thinking about the following extensions:</p><p>  &gt; Allowing ICA to handle non-square mixing matrices. Most research about ICA assumes that A is n x n.
   &gt; Improving the way we handle the computation of the mean, so it doesn't rely on the last batch being
-    of similar size to all prior batches. Again, this is minor, especially for large data sets.</p><p>For additional references, see Aapo Hyvärinen's other papers, and visit:
+    of similar size to all prior batches. Again, this is minor, especially for large data sets.
+  &gt; Thinking of ways to make this scale better to a large variety of datasets</p><p>For additional references, see Aapo Hyvärinen's other papers, and visit:
   http://research.ics.aalto.fi/ica/fastica/
 </p></div></div>
     </li><li name="BIDMach.models.KMeans" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -356,7 +357,7 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:</p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>alpha(0.001f) Dirichlet prior on document-topic weights</li><li>beta(0.0001f) Dirichlet prior on word-topic weights</li><li>nsamps(100) the number of repeated samples to take</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize: the number of samples processed in a block</li><li>power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power</li><li>npasses(10): number of complete passes over the dataset</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)
+      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:</p><ul><li>dim(256): Model dimension</li><li>uiter(5): Number of iterations on one block of data</li><li>alpha(0.001f) Dirichlet prior on document-topic weights</li><li>beta(0.0001f) Dirichlet prior on word-topic weights</li><li>nsamps(100) the number of repeated samples to take</li></ul><p>Other key parameters inherited from the learner, datasource and updater:</p><ul><li>batchSize: the number of samples processed in a block</li><li>power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power</li><li>npasses(10): number of complete passes over the dataset</li><li>uesBino(false): use poisson (default) or binomial sampling (if true)</li></ul><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)
 opts.what             <span class="cmt">// prints the available options</span>
 opts.uiter=<span class="num">2</span>          <span class="cmt">// customize options</span>
 nn.run                <span class="cmt">// run the learner</span>
@@ -384,12 +385,13 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>Extends Factor Model Options with:
+      <p class="shortcomment cmt">Latent Dirichlet Model using repeated Gibbs sampling.</p><div class="fullcomment"><div class="comment cmt"><p>Latent Dirichlet Model using repeated Gibbs sampling.</p><p>This version (v) supports per-model-element sample counts,
+e.g. for local heating or cooling of particular model coefficients.</p><p>Extends Factor Model Options with:
 - dim(256): Model dimension
 - uiter(5): Number of iterations on one block of data
 - alpha(0.001f) Dirichlet prior on document-topic weights
 - beta(0.0001f) Dirichlet prior on word-topic weights
-- nsamps(100) the number of repeated samples to take</p><p>Other key parameters inherited from the learner, datasource and updater:
+- nsamps(row(100)) matrix with the number of repeated samples to take</p><p>Other key parameters inherited from the learner, datasource and updater:
 - blockSize: the number of samples processed in a block
 - power(0.3f): the exponent of the moving average model' = a dmodel + (1-a)*model, a = 1/nblocks^power
 - npasses(10): number of complete passes over the dataset</p><p><b>Example:</b></p><p>a is a sparse word x document matrix</p><pre><span class="kw">val</span> (nn, opts) = LDAgibbs.learn(a)

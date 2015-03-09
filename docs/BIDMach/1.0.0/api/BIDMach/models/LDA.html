@@ -435,7 +435,7 @@ nn.datamat            <span class="cmt">// get the other factor</span></pre></di
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Evaluates model log-likelihood on a held-out batchof the input data.</p><div class="fullcomment"><div class="comment cmt"><p>Evaluates model log-likelihood on a held-out batchof the input data.
+      <p class="shortcomment cmt">Evaluates model log-likelihood on a held-out batch of the input data.</p><div class="fullcomment"><div class="comment cmt"><p>Evaluates model log-likelihood on a held-out batch of the input data.
 </p></div><dl class="paramcmts block"><dt class="param">sdata</dt><dd class="cmt"><p>The word x document input data. Has dimension (# words x opts.batchSize), where batchSize is
   typically much smaller than the total number of documents, so sdata is usually a portion of the full input.</p></dd><dt class="param">user</dt><dd class="cmt"><p>An (opts.dim x opts.batchSize) matrix that stores some intermediate/temporary data and gets left-
   multiplied by modelmats(0) to form sdata.</p></dd><dt class="param">ipass</dt><dd class="cmt"><p>Index of the pass over the data (0 = first pass, 1 = second pass, etc.).

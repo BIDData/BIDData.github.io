@@ -106,7 +106,7 @@
       </a>
     </span>
       
-    </li><li name="BIDMach.models.ICA.Opts" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+    </li><li name="BIDMach.models.ICA.Opts" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="OptsextendsFactorModel.Opts"></a>
       <a id="Opts:Opts"></a>
       <h4 class="signature">
@@ -122,10 +122,7 @@
         <img src="../../lib/permalink.png" />
       </a>
     </span>
-      <p class="shortcomment cmt">Provides some settings for the ICA model.</p><div class="fullcomment"><div class="comment cmt"><p>Provides some settings for the ICA model.</p><p>&gt; G_function: possible values are &quot;logcosh&quot;, &quot;exponent&quot;, &quot;kurtosis&quot;. Using &quot;logcosh&quot; is recommended.
-&gt; orthogMethod: possible values are &quot;iterative&quot;, which corresponds to the W &lt;- 1.5*W + .5*(W*<sup>W*W)
-  case (recommended), or &quot;symmetric&quot; which is W &lt;- (W*</sup>W)^{-1/2}*W, which uses eigendecompositions.
-</p></div></div>
+      
     </li></ol>
             </div>
 
@@ -332,6 +329,23 @@
       </a>
     </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMach.models.ICA#learner" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="learner(mat0:BIDMat.Mat,d:Int):(BIDMach.Learner,BIDMach.Learner.OptionswithBIDMach.datasources.MatDS.OptswithBIDMach.models.ICA.OptswithBIDMach.updaters.ADAGrad.Opts)"></a>
+      <a id="learner(Mat,Int):(Learner,Learner.Optionswithdatasources.MatDS.OptswithOptswithupdaters.ADAGrad.Opts)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">learner</span><span class="params">(<span name="mat0">mat0: <span class="extype" name="BIDMat.Mat">Mat</span></span>, <span name="d">d: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: (<a href="../Learner.html" class="extype" name="BIDMach.Learner">Learner</a>, <a href="../Learner$$Options.html" class="extype" name="BIDMach.Learner.Options">Learner.Options</a> with <a href="../datasources/MatDS$$Opts.html" class="extype" name="BIDMach.datasources.MatDS.Opts">datasources.MatDS.Opts</a> with <a href="ICA$$Opts.html" class="extype" name="BIDMach.models.ICA.Opts">Opts</a> with <a href="../updaters/ADAGrad$$Opts.html" class="extype" name="BIDMach.updaters.ADAGrad.Opts">updaters.ADAGrad.Opts</a>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#BIDMach.models.ICA$@learner(mat0:BIDMat.Mat,d:Int):(BIDMach.Learner,BIDMach.Learner.OptionswithBIDMach.datasources.MatDS.OptswithBIDMach.models.ICA.OptswithBIDMach.updaters.ADAGrad.Opts)" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">ICA with a single matrix datasource.</p><div class="fullcomment"><div class="comment cmt"><p>ICA with a single matrix datasource. A dimension d needs to be specified.</p></div></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
