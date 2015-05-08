@@ -1,0 +1,2373 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>GLPair - BIDMat.GLPair</title>
+          <meta name="description" content="GLPair - BIDMat.GLPair" />
+          <meta name="keywords" content="GLPair BIDMat.GLPair" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'BIDMat.GLPair';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img src="../lib/class_big.png" />
+        <p id="owner"><a href="package.html" class="extype" name="BIDMat">BIDMat</a></p>
+        <h1>GLPair</h1> <span class="permalink">
+      <a href="../index.html#BIDMat.GLPair" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GLPair</span><span class="result"> extends <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="BIDMat.GLPair"><span>GLPair</span></li><li class="in" name="BIDMat.Pair"><span>Pair</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="BIDMat.GLPair#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(omat:BIDMat.Mat,mat:BIDMat.GLMat):BIDMat.GLPair"></a>
+      <a id="&lt;init&gt;:GLPair"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GLPair</span><span class="params">(<span name="omat">omat: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>, <span name="mat">mat: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;init&gt;(omat:BIDMat.Mat,mat:BIDMat.GLMat):BIDMat.GLPair" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="BIDMat.GLPair#!=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="!=(b:Double):BIDMat.GLMat"></a>
+      <a id="!=(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(b:Int):BIDMat.GLMat"></a>
+      <a id="!=(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(b:Float):BIDMat.GLMat"></a>
+      <a id="!=(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#!=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="!=(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="!=(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="!=(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@##():Int" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMat.Pair#*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*(b:Int):BIDMat.Mat"></a>
+      <a id="*(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times" class="name">*</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*(b:Float):BIDMat.Mat"></a>
+      <a id="*(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times" class="name">*</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="*(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times" class="name">*</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#**" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="**(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="**(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$times" class="name">**</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@**(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#*@" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*@(a:Int):BIDMat.GLMat"></a>
+      <a id="*@(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$at" class="name">*@</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*@(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#*@" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*@(a:Float):BIDMat.GLMat"></a>
+      <a id="*@(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$at" class="name">*@</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*@(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#*@" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="*@(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="*@(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$at" class="name">*@</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*@(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#*@" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*@(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="*@(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$at" class="name">*@</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*@(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#*^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*^(b:Int):BIDMat.Mat"></a>
+      <a id="*^(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$up" class="name">*^</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*^(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#*^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*^(b:Float):BIDMat.Mat"></a>
+      <a id="*^(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$up" class="name">*^</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*^(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#*^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="*^(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="*^(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $times$up" class="name">*^</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@*^(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(a:Int):BIDMat.GLMat"></a>
+      <a id="+(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="name">+</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@+(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(a:Float):BIDMat.GLMat"></a>
+      <a id="+(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="name">+</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@+(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#+" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="+(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="+(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="name">+</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@+(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="+(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="name">+</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@+(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#-" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-(a:Int):BIDMat.GLMat"></a>
+      <a id="-(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus" class="name">-</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@-(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#-" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-(a:Float):BIDMat.GLMat"></a>
+      <a id="-(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus" class="name">-</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@-(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#-" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="-(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="-(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus" class="name">-</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@-(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#-" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="-(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus" class="name">-</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@-(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#/" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/(a:Int):BIDMat.GLMat"></a>
+      <a id="/(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div" class="name">/</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#/" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/(a:Float):BIDMat.GLMat"></a>
+      <a id="/(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div" class="name">/</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#/" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="/(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="/(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div" class="name">/</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#/" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="/(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div" class="name">/</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#/&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/&lt;(b:Int):BIDMat.Mat"></a>
+      <a id="/&lt;(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div$less" class="name">/&lt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/&lt;(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#/&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/&lt;(b:Float):BIDMat.Mat"></a>
+      <a id="/&lt;(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div$less" class="name">/&lt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/&lt;(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#/&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="/&lt;(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="/&lt;(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $div$less" class="name">/&lt;</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@/&lt;(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;(b:Double):BIDMat.GLMat"></a>
+      <a id="&lt;(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;(b:Int):BIDMat.GLMat"></a>
+      <a id="&lt;(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;(b:Float):BIDMat.GLMat"></a>
+      <a id="&lt;(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="&lt;(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#&lt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="&lt;(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;=(b:Double):BIDMat.GLMat"></a>
+      <a id="&lt;=(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;=(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#&lt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;=(b:Int):BIDMat.GLMat"></a>
+      <a id="&lt;=(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;=(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;=(b:Float):BIDMat.GLMat"></a>
+      <a id="&lt;=(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;=(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&lt;=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;=(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="&lt;=(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;=(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#&lt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;=(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="&lt;=(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&lt;=(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#==" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="==(b:Double):BIDMat.GLMat"></a>
+      <a id="==(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(b:Int):BIDMat.GLMat"></a>
+      <a id="==(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(b:Float):BIDMat.GLMat"></a>
+      <a id="==(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#==" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="==(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="==(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="==(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="BIDMat.GLPair#===" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="===(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="===(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq$eq" class="name">===</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@===(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#===" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="===(b:Int):BIDMat.Mat"></a>
+      <a id="===(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq$eq" class="name">===</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@===(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#===" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="===(b:Float):BIDMat.Mat"></a>
+      <a id="===(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq$eq" class="name">===</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@===(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#===" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="===(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="===(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq$eq" class="name">===</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@===(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&gt;(b:Double):BIDMat.GLMat"></a>
+      <a id="&gt;(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;(b:Int):BIDMat.GLMat"></a>
+      <a id="&gt;(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;(b:Float):BIDMat.GLMat"></a>
+      <a id="&gt;(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&gt;(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="&gt;(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="&gt;(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&gt;=(b:Double):BIDMat.GLMat"></a>
+      <a id="&gt;=(Double):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;=(b:Double):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#&gt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;=(b:Int):BIDMat.GLMat"></a>
+      <a id="&gt;=(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;=(b:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;=(b:Float):BIDMat.GLMat"></a>
+      <a id="&gt;=(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;=(b:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#&gt;=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&gt;=(b:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="&gt;=(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="b">b: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;=(b:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#&gt;=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;=(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="&gt;=(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@&gt;=(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#Tx" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Tx(b:Int):BIDMat.Mat"></a>
+      <a id="Tx(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tx</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@Tx(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#Tx" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Tx(b:Float):BIDMat.Mat"></a>
+      <a id="Tx(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tx</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@Tx(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#Tx" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Tx(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="Tx(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Tx</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@Tx(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#\" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="\(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="\(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash" class="name">\</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\(b:Int):BIDMat.Mat"></a>
+      <a id="\(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash" class="name">\</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\(b:Float):BIDMat.Mat"></a>
+      <a id="\(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash" class="name">\</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="\(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash" class="name">\</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#\\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\\(b:Int):BIDMat.Mat"></a>
+      <a id="\\(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash$bslash" class="name">\\</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\\(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#\\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\\(b:Float):BIDMat.Mat"></a>
+      <a id="\\(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash$bslash" class="name">\\</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\\(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#\\" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="\\(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="\\(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bslash$bslash" class="name">\\</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@\\(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^(a:Int):BIDMat.GLMat"></a>
+      <a id="^(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up" class="name">^</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^(a:Float):BIDMat.GLMat"></a>
+      <a id="^(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up" class="name">^</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#^" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="^(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up" class="name">^</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#^*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^*(b:Int):BIDMat.Mat"></a>
+      <a id="^*(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up$times" class="name">^*</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^*(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#^*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^*(b:Float):BIDMat.Mat"></a>
+      <a id="^*(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up$times" class="name">^*</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^*(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#^*" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="^*(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="^*(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $up$times" class="name">^*</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@^*(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@clone():Object" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMat.Pair#dot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dot(b:Int):BIDMat.Mat"></a>
+      <a id="dot(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dot</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dot(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#dot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dot(b:Float):BIDMat.Mat"></a>
+      <a id="dot(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dot</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dot(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#dot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dot(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="dot(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dot</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dot(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#dotr" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dotr(b:Int):BIDMat.Mat"></a>
+      <a id="dotr(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dotr</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dotr(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#dotr" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dotr(b:Float):BIDMat.Mat"></a>
+      <a id="dotr(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dotr</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dotr(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#dotr" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dotr(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="dotr(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">dotr</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@dotr(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@finalize():Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@hashCode():Int" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="BIDMat.GLPair#mat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mat:BIDMat.GLMat"></a>
+      <a id="mat:GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mat</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@mat:BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMat.Pair#notImplemented0" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notImplemented0(s:String):BIDMat.Mat"></a>
+      <a id="notImplemented0(String):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notImplemented0</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@notImplemented0(s:String):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#notImplemented1" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notImplemented1(s:String,that:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="notImplemented1(String,Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notImplemented1</span><span class="params">(<span name="s">s: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="that">that: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@notImplemented1(s:String,that:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@notify():Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMat.GLPair#omat" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="omat:BIDMat.Mat"></a>
+      <a id="omat:Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">omat</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@omat:BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.GLPair#on" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="on(a:BIDMat.GLMat):BIDMat.GLMat"></a>
+      <a id="on(GLMat):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">on</span><span class="params">(<span name="a">a: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@on(a:BIDMat.GLMat):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      
+    </li><li name="BIDMat.Pair#on" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="on(b:Int):BIDMat.Mat"></a>
+      <a id="on(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">on</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@on(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#on" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="on(b:Float):BIDMat.Mat"></a>
+      <a id="on(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">on</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@on(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#on" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="on(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="on(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">on</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@on(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="BIDMat.GLPair#t" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="t:BIDMat.GLMat"></a>
+      <a id="t:GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">t</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@t:BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@toString():String" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@wait():Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="BIDMat.Pair#xT" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="xT(b:Int):BIDMat.Mat"></a>
+      <a id="xT(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xT</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@xT(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#xT" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="xT(b:Float):BIDMat.Mat"></a>
+      <a id="xT(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xT</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@xT(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#xT" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="xT(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="xT(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">xT</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@xT(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#∘" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∘(a:Int):BIDMat.GLMat"></a>
+      <a id="∘(Int):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2218" class="name">∘</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∘(a:Int):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.GLPair#∘" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∘(a:Float):BIDMat.GLMat"></a>
+      <a id="∘(Float):GLMat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2218" class="name">∘</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="GLMat.html" class="extype" name="BIDMat.GLMat">GLMat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∘(a:Float):BIDMat.GLMat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="BIDMat.GLPair">GLPair</a> → <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∘" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∘(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="∘(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2218" class="name">∘</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∘(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙(b:Int):BIDMat.Mat"></a>
+      <a id="∙(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219" class="name">∙</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙(b:Float):BIDMat.Mat"></a>
+      <a id="∙(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219" class="name">∙</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="∙(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219" class="name">∙</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙→(b:Int):BIDMat.Mat"></a>
+      <a id="∙→(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219$u2192" class="name">∙→</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙→(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙→(b:Float):BIDMat.Mat"></a>
+      <a id="∙→(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219$u2192" class="name">∙→</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙→(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#∙→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="∙→(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="∙→(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2219$u2192" class="name">∙→</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@∙→(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#⊗" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="⊗(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="⊗(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2297" class="name">⊗</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@⊗(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#▷" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="▷(b:Int):BIDMat.Mat"></a>
+      <a id="▷(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25B7" class="name">▷</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@▷(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#▷" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="▷(b:Float):BIDMat.Mat"></a>
+      <a id="▷(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25B7" class="name">▷</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@▷(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#▷" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="▷(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="▷(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25B7" class="name">▷</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@▷(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#◁" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="◁(b:Int):BIDMat.Mat"></a>
+      <a id="◁(Int):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25C1" class="name">◁</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@◁(b:Int):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#◁" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="◁(b:Float):BIDMat.Mat"></a>
+      <a id="◁(Float):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25C1" class="name">◁</span><span class="params">(<span name="b">b: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@◁(b:Float):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li><li name="BIDMat.Pair#◁" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="◁(b:BIDMat.Mat):BIDMat.Mat"></a>
+      <a id="◁(Mat):Mat"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u25C1" class="name">◁</span><span class="params">(<span name="b">b: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>)</span><span class="result">: <a href="Mat.html" class="extype" name="BIDMat.Mat">Mat</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#BIDMat.GLPair@◁(b:BIDMat.Mat):BIDMat.Mat" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="BIDMat.Pair">
+              <h3>Inherited from <a href="Pair.html" class="extype" name="BIDMat.Pair">Pair</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
